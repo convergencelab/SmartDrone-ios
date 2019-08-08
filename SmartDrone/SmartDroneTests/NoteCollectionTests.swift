@@ -17,7 +17,7 @@ class NoteCollectionTests: XCTestCase {
     func testToRuleThemAll() {
         let notes = NoteCollection()
         for i in 0..<MusicTheory.TOTAL_NOTES {
-            var curNote = Note(ix: i)
+            let curNote = Note(ix: i)
             XCTAssertEqual(curNote.ix, notes.getNoteAt(ix: i).ix)
             XCTAssertEqual(curNote.name, notes.getNoteAt(ix: i).name)
             XCTAssertEqual(curNote.rawIx, notes.getNoteAt(ix: i).rawIx)
