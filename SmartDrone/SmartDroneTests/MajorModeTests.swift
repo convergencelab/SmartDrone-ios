@@ -14,25 +14,6 @@ import XCTest
 
 class MajorModeTests: XCTestCase {
     
-//    func testShouldFail() {
-//        let ans = [69, 420, 0, 0, 0, 0, 0]
-//
-//        let mode: Mode
-//        mode = MajorMode(ix: 0)
-//
-//        XCTAssertEqual(ans, mode.intervals)
-//    }
-    
-    // Test to make sure the use of protocols is correct
-    func testInheritence() {
-        let ans = [0, 2, 4, 5, 7, 9, 11]
-        
-        let mode: Mode
-        mode = MajorMode(ix: 0)
-        
-        XCTAssertEqual(ans, mode.intervals)
-    }
-    
     // Tests for each mode
     
     func testIonian() {
