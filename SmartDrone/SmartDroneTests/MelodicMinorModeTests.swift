@@ -2,7 +2,7 @@
 //  MelodicMinorModeTests.swift
 //  SmartDroneTests
 //
-//  Created by IT Services Loaner on 2019-08-08.
+//  Created by Travis MacDonaldi on 2019-08-08.
 //  Copyright © 2019 Convergence Lab. All rights reserved.
 //
 
