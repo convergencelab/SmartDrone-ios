@@ -13,6 +13,7 @@
 		F77BC8FD22F0633900296789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8FC22F0633900296789 /* Assets.xcassets */; };
 		F77BC90022F0633900296789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8FE22F0633900296789 /* LaunchScreen.storyboard */; };
 		F77BC90B22F0633B00296789 /* SmartDroneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC90A22F0633B00296789 /* SmartDroneTests.swift */; };
+		F7816D9922FC836500A58486 /* MajorModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7816D9822FC836500A58486 /* MajorModeTests.swift */; };
 		F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
 		F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
@@ -82,6 +83,7 @@
 		F77BC90622F0633B00296789 /* SmartDroneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDroneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC90A22F0633B00296789 /* SmartDroneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartDroneTests.swift; sourceTree = "<group>"; };
 		F77BC90C22F0633B00296789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7816D9822FC836500A58486 /* MajorModeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorModeTests.swift; sourceTree = "<group>"; };
 		F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
 		F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 				F77BC90A22F0633B00296789 /* SmartDroneTests.swift */,
 				F77BC90C22F0633B00296789 /* Info.plist */,
 				F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */,
+				F7816D9822FC836500A58486 /* MajorModeTests.swift */,
 			);
 			path = SmartDroneTests;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7816D9922FC836500A58486 /* MajorModeTests.swift in Sources */,
 				F77BC90B22F0633B00296789 /* SmartDroneTests.swift in Sources */,
 				F7FA2C5F22F0800D00E740A8 /* NoteTests.swift in Sources */,
 			);
