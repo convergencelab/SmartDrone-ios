@@ -18,6 +18,7 @@
 		F78D093222FC9B790077EAB5 /* NoteCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D093122FC9B790077EAB5 /* NoteCollectionTests.swift */; };
 		F78D093622FCA15C0077EAB5 /* ModeCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */; };
 		F79B493E22FDD8BA00B0B915 /* ActiveNoteListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */; };
+		F79B494122FDE9DC00B0B915 /* KeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B494022FDE9DC00B0B915 /* KeyTests.swift */; };
 		F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
 		F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
@@ -92,6 +93,7 @@
 		F78D093122FC9B790077EAB5 /* NoteCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionTests.swift; sourceTree = "<group>"; };
 		F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCollectionTests.swift; sourceTree = "<group>"; };
 		F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNoteListTests.swift; sourceTree = "<group>"; };
+		F79B494022FDE9DC00B0B915 /* KeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTests.swift; sourceTree = "<group>"; };
 		F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
 		F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				F78D093122FC9B790077EAB5 /* NoteCollectionTests.swift */,
 				F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */,
 				F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */,
+				F79B494022FDE9DC00B0B915 /* KeyTests.swift */,
 			);
 			path = SmartDroneTests;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				F78D093622FCA15C0077EAB5 /* ModeCollectionTests.swift in Sources */,
 				F79B493E22FDD8BA00B0B915 /* ActiveNoteListTests.swift in Sources */,
 				F78D093222FC9B790077EAB5 /* NoteCollectionTests.swift in Sources */,
+				F79B494122FDE9DC00B0B915 /* KeyTests.swift in Sources */,
 				F77BC90B22F0633B00296789 /* SmartDroneTests.swift in Sources */,
 				F7FA2C5F22F0800D00E740A8 /* NoteTests.swift in Sources */,
 			);
