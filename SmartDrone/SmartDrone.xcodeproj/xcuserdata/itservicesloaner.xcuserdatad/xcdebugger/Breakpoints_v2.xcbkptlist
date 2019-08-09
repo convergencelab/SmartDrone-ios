@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "ModeCollectionTests"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -26,7 +26,7 @@
                   moduleName = "SmartDroneTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
-                  timestampString = "586985475.873349"
+                  timestampString = "587063720.238693"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "SmartDroneTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
-                  timestampString = "586985475.8772449"
+                  timestampString = "587063720.242457"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -56,7 +56,7 @@
                   moduleName = "SmartDroneTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
-                  timestampString = "586985475.8809"
+                  timestampString = "587063720.24602"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -71,7 +71,7 @@
                   moduleName = "SmartDroneTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
-                  timestampString = "586985475.884636"
+                  timestampString = "587063720.2496409"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -86,7 +86,7 @@
                   moduleName = "SmartDroneTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
-                  timestampString = "586985475.888162"
+                  timestampString = "587063720.2530839"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -101,7 +101,7 @@
                   moduleName = "SmartDroneTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
-                  timestampString = "586985475.89123"
+                  timestampString = "587063720.255664"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -116,7 +116,7 @@
                   moduleName = "SmartDroneTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
-                  timestampString = "586985475.893906"
+                  timestampString = "587063720.258199"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -124,6 +124,22 @@
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartDroneTests/ActiveNoteListTests.swift"
+            timestampString = "587063714.703282"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ActiveNoteListTests"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
