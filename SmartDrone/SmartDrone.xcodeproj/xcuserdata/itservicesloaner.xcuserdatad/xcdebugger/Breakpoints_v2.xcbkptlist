@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartDroneTests/ModeCollectionTests.swift"
+            timestampString = "586985469.983934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ModeCollectionTests"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartDroneTests.ModeCollectionTests.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; SmartDroneTests.ModeCollectionTests"
+                  moduleName = "SmartDroneTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
+                  timestampString = "587066067.029137"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartDroneTests.ModeCollectionTests.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; SmartDroneTests.ModeCollectionTests"
+                  moduleName = "SmartDroneTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
+                  timestampString = "587066067.0329469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartDroneTests.ModeCollectionTests.__allocating_init(selector: ObjectiveC.Selector) -&gt; SmartDroneTests.ModeCollectionTests"
+                  moduleName = "SmartDroneTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
+                  timestampString = "587066067.036595"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartDroneTests.ModeCollectionTests.init(selector: ObjectiveC.Selector) -&gt; SmartDroneTests.ModeCollectionTests"
+                  moduleName = "SmartDroneTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
+                  timestampString = "587066067.039946"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartDroneTests.ModeCollectionTests.__allocating_init() -&gt; SmartDroneTests.ModeCollectionTests"
+                  moduleName = "SmartDroneTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
+                  timestampString = "587066067.043509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartDroneTests.ModeCollectionTests.init() -&gt; SmartDroneTests.ModeCollectionTests"
+                  moduleName = "SmartDroneTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
+                  timestampString = "587066067.04721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartDroneTests.ModeCollectionTests.__deallocating_deinit"
+                  moduleName = "SmartDroneTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itservicesloaner/Desktop/SmartDrone/SmartDrone-ios/SmartDrone/SmartDroneTests/ModeCollectionTests.swift"
+                  timestampString = "587066067.050764"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartDroneTests/ActiveNoteListTests.swift"
+            timestampString = "587323279.8024549"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ActiveNoteListTests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
