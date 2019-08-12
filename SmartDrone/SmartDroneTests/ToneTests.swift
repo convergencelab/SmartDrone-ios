@@ -13,16 +13,6 @@ import XCTest
 
 public class ToneTests: XCTestCase {
     
-    func testToneType() {
-        let cTone: Tone
-        let bTone: Tone
-        
-        cTone = ChordTone(degree: 0)
-        bTone = BassTone(degree: 0)
-        
-        XCTAssertTrue(true)
-    }
-    
     /* CHORD TONE TESTS */
     
     func testChordToneIx1() {
@@ -41,6 +31,16 @@ public class ToneTests: XCTestCase {
         let cTone: Tone
         cTone = ChordTone(degree: 8)
         XCTAssertEqual(cTone.degree, 8)
+    }
+    
+    func testEquals() {
+        let lhsTone: ChordTone
+        let rhsTone: ChordTone
+        
+        lhsTone = ChordTone(degree: 2)
+        rhsTone = ChordTone(degree: 2)
+        
+        XCTAssertEqual(lhsTone, rhsTone)
     }
     
     /* BASS TONE TESTS */
