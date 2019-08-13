@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F522F0630900296789 /* AppDelegate.swift */; };
-		F77BC8F822F0630900296789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F722F0630900296789 /* ViewController.swift */; };
+		F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F722F0630900296789 /* DroneViewController.swift */; };
 		F77BC8FB22F0630A00296789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8F922F0630A00296789 /* Main.storyboard */; };
 		F77BC8FD22F0633900296789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8FC22F0633900296789 /* Assets.xcassets */; };
 		F77BC90022F0633900296789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8FE22F0633900296789 /* LaunchScreen.storyboard */; };
@@ -28,6 +28,8 @@
 		F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
 		F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
+		F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD0E23033C7D0078C022 /* BaseView.swift */; };
+		F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD102303406D0078C022 /* BasePresenter.swift */; };
 		F7FA2C5F22F0800D00E740A8 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +88,7 @@
 /* Begin PBXFileReference section */
 		F77BC8F222F0630900296789 /* SmartDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC8F522F0630900296789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F77BC8F722F0630900296789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F77BC8F722F0630900296789 /* DroneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneViewController.swift; sourceTree = "<group>"; };
 		F77BC8FA22F0630A00296789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F77BC8FC22F0633900296789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F77BC8FF22F0633900296789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,6 +109,8 @@
 		F79B49582301C0CB00B0B915 /* MusicTheoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTheoryTests.swift; sourceTree = "<group>"; };
 		F79B495A2301CD6500B0B915 /* VoicingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicingTests.swift; sourceTree = "<group>"; };
 		F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
+		F7B6FD0E23033C7D0078C022 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F7B6FD102303406D0078C022 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,13 +157,15 @@
 		F77BC8F422F0630900296789 /* SmartDrone */ = {
 			isa = PBXGroup;
 			children = (
+				F79B497E23033B5500B0B915 /* drone */,
 				F79B494222FDF95C00B0B915 /* models */,
 				F77BC8F522F0630900296789 /* AppDelegate.swift */,
-				F77BC8F722F0630900296789 /* ViewController.swift */,
 				F77BC8F922F0630A00296789 /* Main.storyboard */,
 				F77BC8FC22F0633900296789 /* Assets.xcassets */,
 				F77BC8FE22F0633900296789 /* LaunchScreen.storyboard */,
 				F77BC90122F0633900296789 /* Info.plist */,
+				F7B6FD0E23033C7D0078C022 /* BaseView.swift */,
+				F7B6FD102303406D0078C022 /* BasePresenter.swift */,
 			);
 			path = SmartDrone;
 			sourceTree = "<group>";
@@ -206,6 +212,14 @@
 				F79B494822FDFA4000B0B915 /* KeyFinderImpl.swift */,
 			);
 			path = keyfinder;
+			sourceTree = "<group>";
+		};
+		F79B497E23033B5500B0B915 /* drone */ = {
+			isa = PBXGroup;
+			children = (
+				F77BC8F722F0630900296789 /* DroneViewController.swift */,
+			);
+			path = drone;
 			sourceTree = "<group>";
 		};
 		F79FF0FC22F06F6F00DE5E38 /* Products */ = {
@@ -343,8 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F77BC8F822F0630900296789 /* ViewController.swift in Sources */,
+				F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */,
+				F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */,
 				F79B494922FDFA4000B0B915 /* KeyFinderImpl.swift in Sources */,
+				F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */,
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,
 			);

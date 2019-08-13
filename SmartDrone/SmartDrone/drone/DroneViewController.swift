@@ -9,7 +9,7 @@
 import UIKit
 import KeyFinder
 
-class ViewController: UIViewController {
+class DroneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
