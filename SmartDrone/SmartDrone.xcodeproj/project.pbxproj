@@ -30,6 +30,7 @@
 		F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
 		F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD0E23033C7D0078C022 /* BaseView.swift */; };
 		F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD102303406D0078C022 /* BasePresenter.swift */; };
+		F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD14230342E00078C022 /* DronePresenter.swift */; };
 		F7FA2C5F22F0800D00E740A8 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
 		F7B6FD0E23033C7D0078C022 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F7B6FD102303406D0078C022 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		F7B6FD14230342E00078C022 /* DronePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DronePresenter.swift; sourceTree = "<group>"; };
 		F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				F77BC8F722F0630900296789 /* DroneViewController.swift */,
+				F7B6FD14230342E00078C022 /* DronePresenter.swift */,
 			);
 			path = drone;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				F79B494922FDFA4000B0B915 /* KeyFinderImpl.swift in Sources */,
 				F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */,
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
+				F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
