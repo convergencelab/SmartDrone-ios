@@ -28,6 +28,8 @@
 		F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
 		F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
+		F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63ACF230485BA00150128 /* NoteFilter.swift */; };
+		F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD1230486E400150128 /* NoteFilterImpl.swift */; };
 		F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD0E23033C7D0078C022 /* BaseView.swift */; };
 		F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD102303406D0078C022 /* BasePresenter.swift */; };
 		F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD14230342E00078C022 /* DronePresenter.swift */; };
@@ -110,6 +112,8 @@
 		F79B49582301C0CB00B0B915 /* MusicTheoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTheoryTests.swift; sourceTree = "<group>"; };
 		F79B495A2301CD6500B0B915 /* VoicingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicingTests.swift; sourceTree = "<group>"; };
 		F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
+		F7A63ACF230485BA00150128 /* NoteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFilter.swift; sourceTree = "<group>"; };
+		F7A63AD1230486E400150128 /* NoteFilterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFilterImpl.swift; sourceTree = "<group>"; };
 		F7B6FD0E23033C7D0078C022 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F7B6FD102303406D0078C022 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		F7B6FD14230342E00078C022 /* DronePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DronePresenter.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 		F7A63AC92304847000150128 /* notefilter */ = {
 			isa = PBXGroup;
 			children = (
+				F7A63ACF230485BA00150128 /* NoteFilter.swift */,
+				F7A63AD1230486E400150128 /* NoteFilterImpl.swift */,
 			);
 			path = notefilter;
 			sourceTree = "<group>";
@@ -407,6 +413,8 @@
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
 				F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,
+				F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */,
+				F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

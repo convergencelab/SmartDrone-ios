@@ -32,7 +32,7 @@ public protocol KeyFinder {
     func setKeyTimerLen(len: Int)
 
     // Todo: Probably move this to note filter class
-    func setNoteLengthFilter(len: Int)
+//    func setNoteLengthFilter(len: Int)
 
     func addKeyChangeObserver(observer: KeyChangeObserver);
 

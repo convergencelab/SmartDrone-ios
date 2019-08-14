@@ -23,6 +23,8 @@ public class KeyFinderImpl: KeyFinder {
     
     private var activeModes: [Mode]
     
+    public var activeKeyTimerLen: Int
+    
     public private(set) var activeKey: Key
     
     private var _parentScale: ParentScale
@@ -105,11 +107,6 @@ public class KeyFinderImpl: KeyFinder {
     
     public func setKeyTimerLen(len: Int) {
         // keyTimerLen = len
-    }
-    
-    // move this to note filter model
-    public func setNoteLengthFilter(len: Int) {
-        // noteLen = len
     }
     
     public func addKeyChangeObserver(observer: KeyChangeObserver) {
