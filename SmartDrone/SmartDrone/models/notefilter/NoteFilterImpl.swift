@@ -8,4 +8,16 @@
 
 import Foundation
 
-public 
+public class NoteFilterImpl: NoteFilter {
+    
+    public var noteFilterLen: Int?
+    
+    public init() {
+        // todo
+    }
+    
+    public func noteCanBeAdded(noteIx: Int) {
+        // todo
+    }
+    
+}

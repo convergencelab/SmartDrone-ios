@@ -9,27 +9,37 @@
 import Foundation
 import KeyFinder
 
-public class KeyFinderImpl: KeyFinder {
+public class KeyFinderImpl: KeyFinder {    
+    
+    /* Constants */
     
     private static let majorIncrementSequence = MusicTheory.PHRYGIAN_SCALE_SEQUENCE
     
     private static let melodicMinorIncrementSequence = MusicTheory.DORIAN_FLAT2_SEQUENCE
     
+    /* Data & Objects */
+    
+    // todo: move this shit to HarmonyGenerator
     private let modeCollection: ModeCollection
     
-    private var maxKeyStrength: Int?
+    // todo: get rid of this shit
+    private var activeModes: [Mode]?
     
     private var activeNoteList: ActiveNoteList
     
-    private var activeModes: [Mode]
+    public private(set) var activeKeyIx: Int
     
-    public var activeKeyTimerLen: Int
+    /* Vars */
     
-    public private(set) var activeKey: Key
+    private var isContender: [Bool]
     
-    private var _parentScale: ParentScale
+    private var maxKeyStrength: Int?
     
-    public var parentScale: ParentScale {
+    public var activeKeyTimerLen: Int?
+    
+    private var _parentScale: ParentScale?
+    
+    public var parentScale: ParentScale? {
         get {
             return _parentScale
         }
@@ -50,10 +60,10 @@ public class KeyFinderImpl: KeyFinder {
     
     public init() {
         self.activeNoteList = ActiveNoteList()
-        self.modeCollection = ModeCollection()
-        self.parentScale = ParentScale.Major // Major by default
-        
+        self.modeCollection = ModeCollection()        
         self.maxKeyStrength = -1
+        self.activeKeyIx = -1
+        self.isContender = [Bool](repeating: false, count: MusicTheory.OCTAVE_SIZE)
     }
     
     public func start() {
@@ -76,26 +86,27 @@ public class KeyFinderImpl: KeyFinder {
             // stop key timer
     }
     
-    // Function should accept nil note
-    public func addNote(note: Note?) {
-        // android version does notefiltering and shit
-        // but this one will just add the notes + some KeyFinder.java logic
-        
-        if note != nil {
-            activeNoteList.addNote(ix: note!.ix)
-            maxKeyStrength = activeNoteList.keyStrength.max()
-            updateContenderKeys()
-            
-            // if timer active for prev added note
-                // start timer for prev added note
-        }
+    public func addNote(note: Note) {
+        activeNoteList.addNote(ix: note.ix)
+        maxKeyStrength = activeNoteList.keyStrength.max()
+        updateContenderKeys()
     }
     
-    /* THESE FUNCTIONS CALLED BY PRESENTER */
+    public func removeNote(note: Note) {
+        activeNoteList.removeNote(ix: note.ix)
+        maxKeyStrength = activeNoteList.keyStrength.max()
+        updateContenderKeys()
+    }
     
-    // scheduleNoteRemoval(toSchedule: Note)
+    /* Considering moving function to presenter */
+    public func scheduleNoteRemoval(toRemove: Note) {
+        // todo
+    }
     
-    // cancelNoteRemoval(toCancel: Note)
+    /* Considering moving function to presenter */
+    public func cancelNoteRemoval(toCancel: Note) {
+        // todo
+    }
     
     public func getMajorKey(keyIx: Int) -> Key {
         // will generate major mode and make key with it
@@ -103,10 +114,6 @@ public class KeyFinderImpl: KeyFinder {
     
     public func getMelodicMinorKey(keyIx: Int) -> Key {
         // will generate melodic minor mode and make key with it
-    }
-    
-    public func setKeyTimerLen(len: Int) {
-        // keyTimerLen = len
     }
     
     public func addKeyChangeObserver(observer: KeyChangeObserver) {
@@ -118,15 +125,31 @@ public class KeyFinderImpl: KeyFinder {
     }
     
     private func updateContenderKeys() {
-        // for each key strength
-            // if cur key != activeKey
-                // if was contender and doesn't meets requirements
-                    // cancel key change (nil check?)
-                    // contender = true
-        
-                // if key was not contender and meets requirements
-                    // schedule active key change
-                    // isContender = false
+        for (keyIx, keyStr) in activeNoteList.keyStrength.enumerated() {
+            // Don't check active key.
+            if keyIx != activeKey.ix {
+                if isContender[keyIx] {
+                    if !meetsContenderRequirements(curKeyStr: keyStr) {
+                        // todo: cancel key change (nil check?)
+                        isContender[keyIx] = true
+                    }
+                }
+                else {
+                    if meetsContenderRequirements(curKeyStr: keyStr) {
+                        // todo: schedule active key change
+                        isContender[keyIx] = false
+                    }
+                }
+            }
+        }
+    }
+    
+    // Key is active key contender if:
+    // 1. Has greater strength than current active key
+    // 2. Has equal strength to current max strength (cannot be greater)
+    private func meetsContenderRequirements(curKeyStr: Int) -> Bool {
+        return curKeyStr > activeNoteList.keyStrength[activeKey.ix]
+            && curKeyStr == maxKeyStrength
     }
 
 }

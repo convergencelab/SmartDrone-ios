@@ -9,33 +9,30 @@
 import Foundation
 import KeyFinder
 
-public protocol KeyFinder {
+public protocol KeyFinder: class {
 
-//    func getActiveKey() -> Key
-    var activeKey: Key { get }
+    var activeKeyIx: Int { get }
     
-    var parentScale: ParentScale { get set }
-//    func setParentScale(parentScale: ParentScale)
+    var parentScale: ParentScale? { get set }
     
-    var activeKeyTimerLen: Int { get set }
+    var activeKeyTimerLen: Int? { get set }
         
     func start()
 
     func clear()
 
-    func addNote(note: Note?)
+    func addNote(note: Note)
 
     func getMajorKey(keyIx: Int) -> Key
 
     func getMelodicMinorKey(keyIx: Int) -> Key
     
-    func setKeyTimerLen(len: Int)
+    func scheduleNoteRemoval(toRemove: Note)
+    
+    func cancelNoteRemoval(toCancel: Note)
 
-    // Todo: Probably move this to note filter class
-//    func setNoteLengthFilter(len: Int)
+    func addKeyChangeObserver(observer: KeyChangeObserver)
 
-    func addKeyChangeObserver(observer: KeyChangeObserver);
-
-    func removeKeyChangeObserver(observer: KeyChangeObserver);
+    func removeKeyChangeObserver(observer: KeyChangeObserver)
 
 }
