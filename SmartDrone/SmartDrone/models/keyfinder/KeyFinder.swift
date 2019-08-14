@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import KeyFinder
 
 public protocol KeyFinder {
 
@@ -14,27 +15,26 @@ public protocol KeyFinder {
 
     func clear()
 
-    func handleNote(noteIx: Int)
+    func addNote(note: Note?)
 
-    func getActiveKey() -> Key
+//    func getActiveKey() -> Key
+    var activeKey: Key { get }
 
-    func getKey(keyIx: Int) -> Key
+    func getMajorKey(keyIx: Int) -> Key
 
+    func getMelodicMinorKey(keyIx: Int) -> Key
+    
     func setKeyTimerLen(len: Int)
 
     // Todo: Probably move this to note filter class
     func setNoteLengthFilter(len: Int)
 
-    // Todo: Figure out way of dealing with this
-    // Enum class?
-    func setParentScale(parentScale: Int)
+    var parentScale: ParentScale { get set }
+//    func setParentScale(parentScale: ParentScale)
 
-    // Tdoo: getKey() will replace this
-    // ModeTemplate getModeTemplate(int templateIx);
-    // func getMode()
 
-    func addKeyChangeListener(listener: KeyChangeListener);
+    func addKeyChangeObserver(observer: KeyChangeObserver);
 
-    func removeKeyChangeListener(listener: KeyChangeListener);
+    func removeKeyChangeObserver(observer: KeyChangeObserver);
 
 }
