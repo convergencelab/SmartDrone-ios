@@ -11,14 +11,19 @@ import KeyFinder
 
 public protocol KeyFinder {
 
+//    func getActiveKey() -> Key
+    var activeKey: Key { get }
+    
+    var parentScale: ParentScale { get set }
+//    func setParentScale(parentScale: ParentScale)
+    
+    var activeKeyTimerLen: Int { get set }
+        
     func start()
 
     func clear()
 
     func addNote(note: Note?)
-
-//    func getActiveKey() -> Key
-    var activeKey: Key { get }
 
     func getMajorKey(keyIx: Int) -> Key
 
@@ -28,10 +33,6 @@ public protocol KeyFinder {
 
     // Todo: Probably move this to note filter class
     func setNoteLengthFilter(len: Int)
-
-    var parentScale: ParentScale { get set }
-//    func setParentScale(parentScale: ParentScale)
-
 
     func addKeyChangeObserver(observer: KeyChangeObserver);
 

@@ -202,6 +202,11 @@
 		F79B494222FDF95C00B0B915 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				F7A63ACE230484D700150128 /* dronerepository */,
+				F7A63ACD230484BA00150128 /* noteprocessor */,
+				F7A63ACC230484A300150128 /* audioplayer */,
+				F7A63ACB2304848600150128 /* harmonygenerator */,
+				F7A63AC92304847000150128 /* notefilter */,
 				F79B494522FDF9FB00B0B915 /* keyfinder */,
 			);
 			path = models;
@@ -232,6 +237,41 @@
 				F79FF10322F06F6F00DE5E38 /* KeyFinderTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F7A63AC92304847000150128 /* notefilter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = notefilter;
+			sourceTree = "<group>";
+		};
+		F7A63ACB2304848600150128 /* harmonygenerator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = harmonygenerator;
+			sourceTree = "<group>";
+		};
+		F7A63ACC230484A300150128 /* audioplayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = audioplayer;
+			sourceTree = "<group>";
+		};
+		F7A63ACD230484BA00150128 /* noteprocessor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = noteprocessor;
+			sourceTree = "<group>";
+		};
+		F7A63ACE230484D700150128 /* dronerepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = dronerepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

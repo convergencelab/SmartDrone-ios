@@ -48,7 +48,10 @@ public class KeyFinderImpl: KeyFinder {
     
     public init() {
         self.activeNoteList = ActiveNoteList()
+        self.modeCollection = ModeCollection()
         self.parentScale = ParentScale.Major // Major by default
+        
+        self.maxKeyStrength = -1
     }
     
     public func start() {
@@ -79,8 +82,7 @@ public class KeyFinderImpl: KeyFinder {
         if note != nil {
             activeNoteList.addNote(ix: note!.ix)
             maxKeyStrength = activeNoteList.keyStrength.max()
-            
-            // updateContenderKeys()
+            updateContenderKeys()
             
             // if timer active for prev added note
                 // start timer for prev added note
@@ -116,6 +118,18 @@ public class KeyFinderImpl: KeyFinder {
     
     public func removeKeyChangeObserver(observer: KeyChangeObserver) {
         <#code#>
+    }
+    
+    private func updateContenderKeys() {
+        // for each key strength
+            // if cur key != activeKey
+                // if was contender and doesn't meets requirements
+                    // cancel key change (nil check?)
+                    // contender = true
+        
+                // if key was not contender and meets requirements
+                    // schedule active key change
+                    // isContender = false
     }
 
 }
