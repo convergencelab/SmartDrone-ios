@@ -38,6 +38,16 @@
                ReferencedContainer = "container:SmartDrone.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F7FB3C4C2305D52B00511860"
+               BuildableName = "SmartDroneModelTests.xctest"
+               BlueprintName = "SmartDroneModelTests"
+               ReferencedContainer = "container:SmartDrone.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

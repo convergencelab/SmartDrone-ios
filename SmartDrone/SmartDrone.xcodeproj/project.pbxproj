@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F522F0630900296789 /* AppDelegate.swift */; };
-		F77BC8F822F0630900296789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F722F0630900296789 /* ViewController.swift */; };
+		F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F722F0630900296789 /* DroneViewController.swift */; };
 		F77BC8FB22F0630A00296789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8F922F0630A00296789 /* Main.storyboard */; };
 		F77BC8FD22F0633900296789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8FC22F0633900296789 /* Assets.xcassets */; };
 		F77BC90022F0633900296789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8FE22F0633900296789 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,10 @@
 		F78D092D22FC958D0077EAB5 /* MelodicMinorModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D092C22FC958D0077EAB5 /* MelodicMinorModeTests.swift */; };
 		F78D093222FC9B790077EAB5 /* NoteCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D093122FC9B790077EAB5 /* NoteCollectionTests.swift */; };
 		F78D093622FCA15C0077EAB5 /* ModeCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */; };
+		F78D9F2E230570AF007477BD /* DroneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F2D230570AF007477BD /* DroneRepository.swift */; };
+		F78D9F3123057151007477BD /* DroneRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */; };
+		F78D9F3C2305757F007477BD /* KeyChangeObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */; };
+		F78D9F3E23057598007477BD /* KeyChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3D23057598007477BD /* KeyChangeObserver.swift */; };
 		F79B493E22FDD8BA00B0B915 /* ActiveNoteListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */; };
 		F79B494122FDE9DC00B0B915 /* KeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B494022FDE9DC00B0B915 /* KeyTests.swift */; };
 		F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B494622FDFA3400B0B915 /* KeyFinder.swift */; };
@@ -28,7 +32,18 @@
 		F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
 		F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
+		F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63ACF230485BA00150128 /* NoteFilter.swift */; };
+		F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD1230486E400150128 /* NoteFilterImpl.swift */; };
+		F7A63AD42304A29C00150128 /* HarmonyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD32304A29C00150128 /* HarmonyGenerator.swift */; };
+		F7A63AD62304A2AA00150128 /* HarmonyGeneratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD52304A2AA00150128 /* HarmonyGeneratorImpl.swift */; };
+		F7B669B62305E1F300E08F24 /* DroneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B669B52305E1F300E08F24 /* DroneConfigurator.swift */; };
+		F7B669B82305E33D00E08F24 /* DroneViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B669B72305E33D00E08F24 /* DroneViewRouter.swift */; };
+		F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD0E23033C7D0078C022 /* BaseView.swift */; };
+		F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD102303406D0078C022 /* BasePresenter.swift */; };
+		F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD14230342E00078C022 /* DronePresenter.swift */; };
 		F7FA2C5F22F0800D00E740A8 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */; };
+		F7FB3C482305D4D300511860 /* KeyFinderImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F412305C558007477BD /* KeyFinderImplTests.swift */; };
+		F7FB3C502305D52B00511860 /* SmartDroneModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3C4F2305D52B00511860 /* SmartDroneModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +82,13 @@
 			remoteGlobalIDString = F74A0A2622E87DF800AF35A6;
 			remoteInfo = KeyFinder;
 		};
+		F7FB3C522305D52B00511860 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F77BC8EA22F0630900296789 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F77BC8F122F0630900296789;
+			remoteInfo = SmartDrone;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,7 +108,7 @@
 /* Begin PBXFileReference section */
 		F77BC8F222F0630900296789 /* SmartDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC8F522F0630900296789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F77BC8F722F0630900296789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F77BC8F722F0630900296789 /* DroneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneViewController.swift; sourceTree = "<group>"; };
 		F77BC8FA22F0630A00296789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F77BC8FC22F0633900296789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F77BC8FF22F0633900296789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +120,11 @@
 		F78D092C22FC958D0077EAB5 /* MelodicMinorModeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodicMinorModeTests.swift; sourceTree = "<group>"; };
 		F78D093122FC9B790077EAB5 /* NoteCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionTests.swift; sourceTree = "<group>"; };
 		F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCollectionTests.swift; sourceTree = "<group>"; };
+		F78D9F2D230570AF007477BD /* DroneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRepository.swift; sourceTree = "<group>"; };
+		F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRepositoryImpl.swift; sourceTree = "<group>"; };
+		F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChangeObservable.swift; sourceTree = "<group>"; };
+		F78D9F3D23057598007477BD /* KeyChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChangeObserver.swift; sourceTree = "<group>"; };
+		F78D9F412305C558007477BD /* KeyFinderImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyFinderImplTests.swift; sourceTree = "<group>"; };
 		F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNoteListTests.swift; sourceTree = "<group>"; };
 		F79B494022FDE9DC00B0B915 /* KeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTests.swift; sourceTree = "<group>"; };
 		F79B494622FDFA3400B0B915 /* KeyFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyFinder.swift; sourceTree = "<group>"; };
@@ -107,7 +134,19 @@
 		F79B49582301C0CB00B0B915 /* MusicTheoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTheoryTests.swift; sourceTree = "<group>"; };
 		F79B495A2301CD6500B0B915 /* VoicingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicingTests.swift; sourceTree = "<group>"; };
 		F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
+		F7A63ACF230485BA00150128 /* NoteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFilter.swift; sourceTree = "<group>"; };
+		F7A63AD1230486E400150128 /* NoteFilterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFilterImpl.swift; sourceTree = "<group>"; };
+		F7A63AD32304A29C00150128 /* HarmonyGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyGenerator.swift; sourceTree = "<group>"; };
+		F7A63AD52304A2AA00150128 /* HarmonyGeneratorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyGeneratorImpl.swift; sourceTree = "<group>"; };
+		F7B669B52305E1F300E08F24 /* DroneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneConfigurator.swift; sourceTree = "<group>"; };
+		F7B669B72305E33D00E08F24 /* DroneViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneViewRouter.swift; sourceTree = "<group>"; };
+		F7B6FD0E23033C7D0078C022 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F7B6FD102303406D0078C022 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		F7B6FD14230342E00078C022 /* DronePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DronePresenter.swift; sourceTree = "<group>"; };
 		F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
+		F7FB3C4D2305D52B00511860 /* SmartDroneModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDroneModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7FB3C4F2305D52B00511860 /* SmartDroneModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartDroneModelTests.swift; sourceTree = "<group>"; };
+		F7FB3C512305D52B00511860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +166,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7FB3C4A2305D52B00511860 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +182,7 @@
 				F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */,
 				F77BC8F422F0630900296789 /* SmartDrone */,
 				F77BC90922F0633B00296789 /* SmartDroneTests */,
+				F7FB3C4E2305D52B00511860 /* SmartDroneModelTests */,
 				F77BC8F322F0630900296789 /* Products */,
 				F77BC92322F0643D00296789 /* Frameworks */,
 			);
@@ -146,6 +193,7 @@
 			children = (
 				F77BC8F222F0630900296789 /* SmartDrone.app */,
 				F77BC90622F0633B00296789 /* SmartDroneTests.xctest */,
+				F7FB3C4D2305D52B00511860 /* SmartDroneModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,9 +201,10 @@
 		F77BC8F422F0630900296789 /* SmartDrone */ = {
 			isa = PBXGroup;
 			children = (
+				F7B669B32305E14C00E08F24 /* scenes */,
+				F78D9F34230574B1007477BD /* misc */,
 				F79B494222FDF95C00B0B915 /* models */,
 				F77BC8F522F0630900296789 /* AppDelegate.swift */,
-				F77BC8F722F0630900296789 /* ViewController.swift */,
 				F77BC8F922F0630A00296789 /* Main.storyboard */,
 				F77BC8FC22F0633900296789 /* Assets.xcassets */,
 				F77BC8FE22F0633900296789 /* LaunchScreen.storyboard */,
@@ -167,6 +216,7 @@
 		F77BC90922F0633B00296789 /* SmartDroneTests */ = {
 			isa = PBXGroup;
 			children = (
+				F78D9F432305CF51007477BD /* ModelTests */,
 				F77BC90A22F0633B00296789 /* SmartDroneTests.swift */,
 				F77BC90C22F0633B00296789 /* Info.plist */,
 				F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */,
@@ -191,9 +241,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F78D9F34230574B1007477BD /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				F7B6FD0E23033C7D0078C022 /* BaseView.swift */,
+				F7B6FD102303406D0078C022 /* BasePresenter.swift */,
+				F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */,
+				F78D9F3D23057598007477BD /* KeyChangeObserver.swift */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		F78D9F432305CF51007477BD /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				F78D9F412305C558007477BD /* KeyFinderImplTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
 		F79B494222FDF95C00B0B915 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				F7A63ACE230484D700150128 /* dronerepository */,
+				F7A63ACD230484BA00150128 /* noteprocessor */,
+				F7A63ACC230484A300150128 /* audioplayer */,
+				F7A63ACB2304848600150128 /* harmonygenerator */,
+				F7A63AC92304847000150128 /* notefilter */,
 				F79B494522FDF9FB00B0B915 /* keyfinder */,
 			);
 			path = models;
@@ -208,6 +282,17 @@
 			path = keyfinder;
 			sourceTree = "<group>";
 		};
+		F79B497E23033B5500B0B915 /* drone */ = {
+			isa = PBXGroup;
+			children = (
+				F77BC8F722F0630900296789 /* DroneViewController.swift */,
+				F7B6FD14230342E00078C022 /* DronePresenter.swift */,
+				F7B669B52305E1F300E08F24 /* DroneConfigurator.swift */,
+				F7B669B72305E33D00E08F24 /* DroneViewRouter.swift */,
+			);
+			path = drone;
+			sourceTree = "<group>";
+		};
 		F79FF0FC22F06F6F00DE5E38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +300,64 @@
 				F79FF10322F06F6F00DE5E38 /* KeyFinderTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F7A63AC92304847000150128 /* notefilter */ = {
+			isa = PBXGroup;
+			children = (
+				F7A63ACF230485BA00150128 /* NoteFilter.swift */,
+				F7A63AD1230486E400150128 /* NoteFilterImpl.swift */,
+			);
+			path = notefilter;
+			sourceTree = "<group>";
+		};
+		F7A63ACB2304848600150128 /* harmonygenerator */ = {
+			isa = PBXGroup;
+			children = (
+				F7A63AD32304A29C00150128 /* HarmonyGenerator.swift */,
+				F7A63AD52304A2AA00150128 /* HarmonyGeneratorImpl.swift */,
+			);
+			path = harmonygenerator;
+			sourceTree = "<group>";
+		};
+		F7A63ACC230484A300150128 /* audioplayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = audioplayer;
+			sourceTree = "<group>";
+		};
+		F7A63ACD230484BA00150128 /* noteprocessor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = noteprocessor;
+			sourceTree = "<group>";
+		};
+		F7A63ACE230484D700150128 /* dronerepository */ = {
+			isa = PBXGroup;
+			children = (
+				F78D9F2D230570AF007477BD /* DroneRepository.swift */,
+				F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */,
+			);
+			path = dronerepository;
+			sourceTree = "<group>";
+		};
+		F7B669B32305E14C00E08F24 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F79B497E23033B5500B0B915 /* drone */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		F7FB3C4E2305D52B00511860 /* SmartDroneModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7FB3C4F2305D52B00511860 /* SmartDroneModelTests.swift */,
+				F7FB3C512305D52B00511860 /* Info.plist */,
+			);
+			path = SmartDroneModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +401,24 @@
 			productReference = F77BC90622F0633B00296789 /* SmartDroneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F7FB3C4C2305D52B00511860 /* SmartDroneModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7FB3C542305D52B00511860 /* Build configuration list for PBXNativeTarget "SmartDroneModelTests" */;
+			buildPhases = (
+				F7FB3C492305D52B00511860 /* Sources */,
+				F7FB3C4A2305D52B00511860 /* Frameworks */,
+				F7FB3C4B2305D52B00511860 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7FB3C532305D52B00511860 /* PBXTargetDependency */,
+			);
+			name = SmartDroneModelTests;
+			productName = SmartDroneModelTests;
+			productReference = F7FB3C4D2305D52B00511860 /* SmartDroneModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -273,6 +434,10 @@
 					};
 					F77BC90522F0633B00296789 = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					F7FB3C4C2305D52B00511860 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = F77BC8F122F0630900296789;
 					};
 				};
 			};
@@ -297,6 +462,7 @@
 			targets = (
 				F77BC8F122F0630900296789 /* SmartDrone */,
 				F77BC90522F0633B00296789 /* SmartDroneTests */,
+				F7FB3C4C2305D52B00511860 /* SmartDroneModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +502,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7FB3C4B2305D52B00511860 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -343,10 +516,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F77BC8F822F0630900296789 /* ViewController.swift in Sources */,
+				F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */,
+				F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */,
+				F78D9F3E23057598007477BD /* KeyChangeObserver.swift in Sources */,
+				F78D9F3123057151007477BD /* DroneRepositoryImpl.swift in Sources */,
+				F7A63AD42304A29C00150128 /* HarmonyGenerator.swift in Sources */,
 				F79B494922FDFA4000B0B915 /* KeyFinderImpl.swift in Sources */,
+				F78D9F2E230570AF007477BD /* DroneRepository.swift in Sources */,
+				F78D9F3C2305757F007477BD /* KeyChangeObservable.swift in Sources */,
+				F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */,
+				F7A63AD62304A2AA00150128 /* HarmonyGeneratorImpl.swift in Sources */,
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
+				F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,
+				F7B669B82305E33D00E08F24 /* DroneViewRouter.swift in Sources */,
+				F7B669B62305E1F300E08F24 /* DroneConfigurator.swift in Sources */,
+				F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */,
+				F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,11 +547,20 @@
 				F79B49592301C0CB00B0B915 /* MusicTheoryTests.swift in Sources */,
 				F79B49512301AB1600B0B915 /* ToneTests.swift in Sources */,
 				F78D093222FC9B790077EAB5 /* NoteCollectionTests.swift in Sources */,
+				F7FB3C482305D4D300511860 /* KeyFinderImplTests.swift in Sources */,
 				F79B495B2301CD6500B0B915 /* VoicingTests.swift in Sources */,
 				F79B494122FDE9DC00B0B915 /* KeyTests.swift in Sources */,
 				F77BC90B22F0633B00296789 /* SmartDroneTests.swift in Sources */,
 				F7FA2C5F22F0800D00E740A8 /* NoteTests.swift in Sources */,
 				F79B49552301B42C00B0B915 /* VoicingTemplateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7FB3C492305D52B00511860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7FB3C502305D52B00511860 /* SmartDroneModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +581,11 @@
 			isa = PBXTargetDependency;
 			name = KeyFinder;
 			targetProxy = F79FF10C22F0738B00DE5E38 /* PBXContainerItemProxy */;
+		};
+		F7FB3C532305D52B00511860 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F77BC8F122F0630900296789 /* SmartDrone */;
+			targetProxy = F7FB3C522305D52B00511860 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,7 +766,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = J2JXL6FGDG;
 				INFOPLIST_FILE = SmartDroneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -585,7 +785,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = J2JXL6FGDG;
 				INFOPLIST_FILE = SmartDroneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -596,6 +796,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7FB3C552305D52B00511860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2JXL6FGDG;
+				INFOPLIST_FILE = SmartDroneModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mytests.SmartDroneModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartDrone.app/SmartDrone";
+			};
+			name = Debug;
+		};
+		F7FB3C562305D52B00511860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2JXL6FGDG;
+				INFOPLIST_FILE = SmartDroneModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mytests.SmartDroneModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartDrone.app/SmartDrone";
 			};
 			name = Release;
 		};
@@ -625,6 +865,15 @@
 			buildConfigurations = (
 				F77BC91E22F0633B00296789 /* Debug */,
 				F77BC91F22F0633B00296789 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7FB3C542305D52B00511860 /* Build configuration list for PBXNativeTarget "SmartDroneModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7FB3C552305D52B00511860 /* Debug */,
+				F7FB3C562305D52B00511860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
