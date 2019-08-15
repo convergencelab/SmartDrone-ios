@@ -17,6 +17,12 @@
 		F78D092D22FC958D0077EAB5 /* MelodicMinorModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D092C22FC958D0077EAB5 /* MelodicMinorModeTests.swift */; };
 		F78D093222FC9B790077EAB5 /* NoteCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D093122FC9B790077EAB5 /* NoteCollectionTests.swift */; };
 		F78D093622FCA15C0077EAB5 /* ModeCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */; };
+		F78D9F2E230570AF007477BD /* DroneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F2D230570AF007477BD /* DroneRepository.swift */; };
+		F78D9F3123057151007477BD /* DroneRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */; };
+		F78D9F36230574D0007477BD /* ParentScaleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F35230574D0007477BD /* ParentScaleObserver.swift */; };
+		F78D9F3A23057570007477BD /* ParentScaleObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3923057570007477BD /* ParentScaleObservable.swift */; };
+		F78D9F3C2305757F007477BD /* KeyChangeObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */; };
+		F78D9F3E23057598007477BD /* KeyChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3D23057598007477BD /* KeyChangeObserver.swift */; };
 		F79B493E22FDD8BA00B0B915 /* ActiveNoteListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */; };
 		F79B494122FDE9DC00B0B915 /* KeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B494022FDE9DC00B0B915 /* KeyTests.swift */; };
 		F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B494622FDFA3400B0B915 /* KeyFinder.swift */; };
@@ -105,6 +111,12 @@
 		F78D092C22FC958D0077EAB5 /* MelodicMinorModeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodicMinorModeTests.swift; sourceTree = "<group>"; };
 		F78D093122FC9B790077EAB5 /* NoteCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionTests.swift; sourceTree = "<group>"; };
 		F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCollectionTests.swift; sourceTree = "<group>"; };
+		F78D9F2D230570AF007477BD /* DroneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRepository.swift; sourceTree = "<group>"; };
+		F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRepositoryImpl.swift; sourceTree = "<group>"; };
+		F78D9F35230574D0007477BD /* ParentScaleObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScaleObserver.swift; sourceTree = "<group>"; };
+		F78D9F3923057570007477BD /* ParentScaleObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScaleObservable.swift; sourceTree = "<group>"; };
+		F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChangeObservable.swift; sourceTree = "<group>"; };
+		F78D9F3D23057598007477BD /* KeyChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChangeObserver.swift; sourceTree = "<group>"; };
 		F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNoteListTests.swift; sourceTree = "<group>"; };
 		F79B494022FDE9DC00B0B915 /* KeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTests.swift; sourceTree = "<group>"; };
 		F79B494622FDFA3400B0B915 /* KeyFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyFinder.swift; sourceTree = "<group>"; };
@@ -167,6 +179,7 @@
 		F77BC8F422F0630900296789 /* SmartDrone */ = {
 			isa = PBXGroup;
 			children = (
+				F78D9F34230574B1007477BD /* misc */,
 				F79B497E23033B5500B0B915 /* drone */,
 				F79B494222FDF95C00B0B915 /* models */,
 				F77BC8F522F0630900296789 /* AppDelegate.swift */,
@@ -174,8 +187,6 @@
 				F77BC8FC22F0633900296789 /* Assets.xcassets */,
 				F77BC8FE22F0633900296789 /* LaunchScreen.storyboard */,
 				F77BC90122F0633900296789 /* Info.plist */,
-				F7B6FD0E23033C7D0078C022 /* BaseView.swift */,
-				F7B6FD102303406D0078C022 /* BasePresenter.swift */,
 			);
 			path = SmartDrone;
 			sourceTree = "<group>";
@@ -205,6 +216,19 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F78D9F34230574B1007477BD /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				F7B6FD0E23033C7D0078C022 /* BaseView.swift */,
+				F7B6FD102303406D0078C022 /* BasePresenter.swift */,
+				F78D9F35230574D0007477BD /* ParentScaleObserver.swift */,
+				F78D9F3923057570007477BD /* ParentScaleObservable.swift */,
+				F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */,
+				F78D9F3D23057598007477BD /* KeyChangeObserver.swift */,
+			);
+			path = misc;
 			sourceTree = "<group>";
 		};
 		F79B494222FDF95C00B0B915 /* models */ = {
@@ -282,6 +306,8 @@
 		F7A63ACE230484D700150128 /* dronerepository */ = {
 			isa = PBXGroup;
 			children = (
+				F78D9F2D230570AF007477BD /* DroneRepository.swift */,
+				F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */,
 			);
 			path = dronerepository;
 			sourceTree = "<group>";
@@ -412,15 +438,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78D9F36230574D0007477BD /* ParentScaleObserver.swift in Sources */,
 				F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */,
 				F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */,
+				F78D9F3E23057598007477BD /* KeyChangeObserver.swift in Sources */,
+				F78D9F3123057151007477BD /* DroneRepositoryImpl.swift in Sources */,
 				F7A63AD42304A29C00150128 /* HarmonyGenerator.swift in Sources */,
 				F79B494922FDFA4000B0B915 /* KeyFinderImpl.swift in Sources */,
+				F78D9F2E230570AF007477BD /* DroneRepository.swift in Sources */,
+				F78D9F3C2305757F007477BD /* KeyChangeObservable.swift in Sources */,
 				F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */,
 				F7A63AD62304A2AA00150128 /* HarmonyGeneratorImpl.swift in Sources */,
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
 				F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,
+				F78D9F3A23057570007477BD /* ParentScaleObservable.swift in Sources */,
 				F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */,
 				F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */,
 			);

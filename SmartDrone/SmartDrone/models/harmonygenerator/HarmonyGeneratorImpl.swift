@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import KeyFinder
 
 public class HarmonyGeneratorImpl: HarmonyGenerator {
     
-    
+    public init() {
+        
+    }
     
 }

@@ -19,11 +19,11 @@ public class KeyFinderImpl: KeyFinder {
     
     /* Data & Objects */
     
-    // todo: move this shit to HarmonyGenerator
-    private let modeCollection: ModeCollection
+//    // todo: move this shit to HarmonyGenerator
+//    private let modeCollection: ModeCollection
     
     // todo: get rid of this shit
-    private var activeModes: [Mode]?
+//    private var activeModes: [Mode]?
     
     private var activeNoteList: ActiveNoteList
     
@@ -47,12 +47,10 @@ public class KeyFinderImpl: KeyFinder {
             _parentScale = parentScale
             
             if parentScale == ParentScale.Major {
-                activeModes = modeCollection.majorModes
                 activeNoteList.incrementSequence =
                     KeyFinderImpl.majorIncrementSequence
             }
             else if parentScale == ParentScale.MelodicMinor {
-                activeModes = modeCollection.melodicMinorModes
                 activeNoteList.incrementSequence = KeyFinderImpl.melodicMinorIncrementSequence
             }
         }
@@ -60,7 +58,6 @@ public class KeyFinderImpl: KeyFinder {
     
     public init() {
         self.activeNoteList = ActiveNoteList()
-        self.modeCollection = ModeCollection()        
         self.maxKeyStrength = -1
         self.activeKeyIx = -1
         self.isContender = [Bool](repeating: false, count: MusicTheory.OCTAVE_SIZE)
@@ -98,12 +95,10 @@ public class KeyFinderImpl: KeyFinder {
         updateContenderKeys()
     }
     
-    /* Considering moving function to presenter */
     public func scheduleNoteRemoval(toRemove: Note) {
         // todo
     }
     
-    /* Considering moving function to presenter */
     public func cancelNoteRemoval(toCancel: Note) {
         // todo
     }
@@ -127,7 +122,7 @@ public class KeyFinderImpl: KeyFinder {
     private func updateContenderKeys() {
         for (keyIx, keyStr) in activeNoteList.keyStrength.enumerated() {
             // Don't check active key.
-            if keyIx != activeKey.ix {
+            if keyIx != activeKeyIx {
                 if isContender[keyIx] {
                     if !meetsContenderRequirements(curKeyStr: keyStr) {
                         // todo: cancel key change (nil check?)
@@ -144,11 +139,11 @@ public class KeyFinderImpl: KeyFinder {
         }
     }
     
-    // Key is active key contender if:
+    // Key is active key contender if and only if:
     // 1. Has greater strength than current active key
     // 2. Has equal strength to current max strength (cannot be greater)
     private func meetsContenderRequirements(curKeyStr: Int) -> Bool {
-        return curKeyStr > activeNoteList.keyStrength[activeKey.ix]
+        return curKeyStr > activeNoteList.keyStrength[activeKeyIx]
             && curKeyStr == maxKeyStrength
     }
 

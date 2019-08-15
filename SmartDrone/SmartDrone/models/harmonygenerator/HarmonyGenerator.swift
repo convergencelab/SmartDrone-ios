@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import KeyFinder
 
 public protocol HarmonyGenerator: class {
     

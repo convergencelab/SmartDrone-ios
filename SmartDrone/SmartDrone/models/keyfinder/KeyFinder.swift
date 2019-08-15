@@ -22,10 +22,6 @@ public protocol KeyFinder: class {
     func clear()
 
     func addNote(note: Note)
-
-    func getMajorKey(keyIx: Int) -> Key
-
-    func getMelodicMinorKey(keyIx: Int) -> Key
     
     func scheduleNoteRemoval(toRemove: Note)
     
