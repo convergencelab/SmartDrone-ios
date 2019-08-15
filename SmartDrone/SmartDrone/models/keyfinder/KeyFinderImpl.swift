@@ -31,12 +31,12 @@ public class KeyFinderImpl: KeyFinder {
     
     private var _activeKeyIx: Int
     
-    private var activeKeyIx: Int {
+    private var activeKeyIx: Int? {
         get {
             return _activeKeyIx
         }
         set {
-            _activeKeyIx = activeKeyIx
+            _activeKeyIx = activeKeyIx!
             notifyObservers()
         }
     }
@@ -69,9 +69,10 @@ public class KeyFinderImpl: KeyFinder {
     public init() {
         self.activeNoteList = ActiveNoteList()
         self.maxKeyStrength = -1
-        self.activeKeyIx = -1
+        self._activeKeyIx = -1
         self.isContender = [Bool](repeating: false, count: MusicTheory.OCTAVE_SIZE)
         self.keyTimers = [Timer?](repeating: nil, count: MusicTheory.OCTAVE_SIZE)
+        self.observers = [KeyChangeObserver]()
     }
     
     public func start() {
@@ -84,8 +85,14 @@ public class KeyFinderImpl: KeyFinder {
             if keyTimers[ix] != nil {
                 cancelKeyTimer(keyIx: ix)
             }
+            // May be possible to put this line in if statement
+            // because only contenders *should* have an active key timer
+            isContender[ix] = false
         }
         activeNoteList.clear()
+        
+        activeKeyIx = nil
+        maxKeyStrength = -1
     }
     
     public func addNote(note: Note) {
@@ -111,7 +118,7 @@ public class KeyFinderImpl: KeyFinder {
     
     public func notifyObservers() {
         for observer in observers {
-            observer.update(newKeyIx: activeKeyIx)
+            observer.update(newKeyIx: activeKeyIx!)
         }
     }
     
@@ -141,7 +148,15 @@ public class KeyFinderImpl: KeyFinder {
     // 1. Has greater strength than current active key
     // 2. Has equal strength to current max strength (cannot be greater)
     private func meetsContenderRequirements(curKeyStr: Int) -> Bool {
-        return curKeyStr > activeNoteList.keyStrength[activeKeyIx]
+        let activeKeyStr: Int
+        if (activeKeyIx != nil) {
+            activeKeyStr = activeNoteList.keyStrength[activeKeyIx!]
+        }
+        else {
+            activeKeyStr = 0
+        }
+    
+        return curKeyStr > activeKeyStr
             && curKeyStr == maxKeyStrength
     }
     
@@ -160,7 +175,7 @@ public class KeyFinderImpl: KeyFinder {
     }
     
     @objc private func setActiveKeyIx(_ timer: Timer) {
-        activeKeyIx = timer.userInfo as! Int
+        activeKeyIx = timer.userInfo as? Int
     }
 
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import KeyFinder
+import CoreData
 
 protocol DroneView: class {
     
@@ -25,45 +25,41 @@ protocol DroneView: class {
     
 }
 
-final class DroneViewController: UIViewController, DroneView {
+class DroneViewController: UIViewController, DroneView {
+    
+    var configurator = DroneConfiguratorImpl()
+    var presenter: DronePresenter!
 
-    let dronePresenter: DronePresenter
-    
-    init(dronePresenter: DronePresenter) {
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
     }
 
     func showDroneActive() {
-        <#code#>
+        // todo
     }
     
     func showDroneInactive() {
-        <#code#>
+        // todo
     }
     
     func showNoteHeard() {
-        <#code#>
+        // todo
     }
     
     func showKeyActive() {
-        <#code#>
+        // todo
     }
     
     func showSoundActivity() {
-        <#code#>
+        // todo
     }
     
     func showPreferencesActivity() {
-        <#code#>
+        // todo
     }
 
 }
