@@ -19,8 +19,6 @@
 		F78D093622FCA15C0077EAB5 /* ModeCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */; };
 		F78D9F2E230570AF007477BD /* DroneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F2D230570AF007477BD /* DroneRepository.swift */; };
 		F78D9F3123057151007477BD /* DroneRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */; };
-		F78D9F36230574D0007477BD /* ParentScaleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F35230574D0007477BD /* ParentScaleObserver.swift */; };
-		F78D9F3A23057570007477BD /* ParentScaleObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3923057570007477BD /* ParentScaleObservable.swift */; };
 		F78D9F3C2305757F007477BD /* KeyChangeObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */; };
 		F78D9F3E23057598007477BD /* KeyChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F3D23057598007477BD /* KeyChangeObserver.swift */; };
 		F79B493E22FDD8BA00B0B915 /* ActiveNoteListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */; };
@@ -113,8 +111,6 @@
 		F78D093522FCA15C0077EAB5 /* ModeCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCollectionTests.swift; sourceTree = "<group>"; };
 		F78D9F2D230570AF007477BD /* DroneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRepository.swift; sourceTree = "<group>"; };
 		F78D9F3023057151007477BD /* DroneRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRepositoryImpl.swift; sourceTree = "<group>"; };
-		F78D9F35230574D0007477BD /* ParentScaleObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScaleObserver.swift; sourceTree = "<group>"; };
-		F78D9F3923057570007477BD /* ParentScaleObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScaleObservable.swift; sourceTree = "<group>"; };
 		F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChangeObservable.swift; sourceTree = "<group>"; };
 		F78D9F3D23057598007477BD /* KeyChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChangeObserver.swift; sourceTree = "<group>"; };
 		F79B493D22FDD8BA00B0B915 /* ActiveNoteListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNoteListTests.swift; sourceTree = "<group>"; };
@@ -223,8 +219,6 @@
 			children = (
 				F7B6FD0E23033C7D0078C022 /* BaseView.swift */,
 				F7B6FD102303406D0078C022 /* BasePresenter.swift */,
-				F78D9F35230574D0007477BD /* ParentScaleObserver.swift */,
-				F78D9F3923057570007477BD /* ParentScaleObservable.swift */,
 				F78D9F3B2305757F007477BD /* KeyChangeObservable.swift */,
 				F78D9F3D23057598007477BD /* KeyChangeObserver.swift */,
 			);
@@ -438,7 +432,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F78D9F36230574D0007477BD /* ParentScaleObserver.swift in Sources */,
 				F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */,
 				F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */,
 				F78D9F3E23057598007477BD /* KeyChangeObserver.swift in Sources */,
@@ -452,7 +445,6 @@
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
 				F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,
-				F78D9F3A23057570007477BD /* ParentScaleObservable.swift in Sources */,
 				F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */,
 				F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */,
 			);

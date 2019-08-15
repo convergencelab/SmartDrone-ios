@@ -9,9 +9,7 @@
 import Foundation
 import KeyFinder
 
-public protocol KeyFinder: class {
-
-    var activeKeyIx: Int { get }
+public protocol KeyFinder: class, KeyChangeObservable {
     
     var parentScale: ParentScale? { get set }
     
@@ -26,9 +24,5 @@ public protocol KeyFinder: class {
     func scheduleNoteRemoval(toRemove: Note)
     
     func cancelNoteRemoval(toCancel: Note)
-
-    func addKeyChangeObserver(observer: KeyChangeObserver)
-
-    func removeKeyChangeObserver(observer: KeyChangeObserver)
 
 }

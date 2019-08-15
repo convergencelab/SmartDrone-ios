@@ -9,7 +9,7 @@
 import Foundation
 import KeyFinder
 
-public class KeyFinderImpl: KeyFinder {    
+public class KeyFinderImpl: KeyFinder {
     
     /* Constants */
     
@@ -19,21 +19,27 @@ public class KeyFinderImpl: KeyFinder {
     
     /* Data & Objects */
     
-//    // todo: move this shit to HarmonyGenerator
-//    private let modeCollection: ModeCollection
-    
-    // todo: get rid of this shit
-//    private var activeModes: [Mode]?
-    
     private var activeNoteList: ActiveNoteList
-    
-    public private(set) var activeKeyIx: Int
-    
-    /* Vars */
     
     private var isContender: [Bool]
     
-    private var maxKeyStrength: Int?
+    private var observers: [KeyChangeObserver]
+    
+    /* Vars */
+    
+    private var _activeKeyIx: Int
+    
+    private var activeKeyIx: Int {
+        get {
+            return _activeKeyIx
+        }
+        set {
+            _activeKeyIx = activeKeyIx
+            notifyObservers()
+        }
+    }
+
+    private var maxKeyStrength: Int
     
     public var activeKeyTimerLen: Int?
     
@@ -85,13 +91,13 @@ public class KeyFinderImpl: KeyFinder {
     
     public func addNote(note: Note) {
         activeNoteList.addNote(ix: note.ix)
-        maxKeyStrength = activeNoteList.keyStrength.max()
+        maxKeyStrength = activeNoteList.keyStrength.max()!
         updateContenderKeys()
     }
     
     public func removeNote(note: Note) {
         activeNoteList.removeNote(ix: note.ix)
-        maxKeyStrength = activeNoteList.keyStrength.max()
+        maxKeyStrength = activeNoteList.keyStrength.max()!
         updateContenderKeys()
     }
     
@@ -103,20 +109,19 @@ public class KeyFinderImpl: KeyFinder {
         // todo
     }
     
-    public func getMajorKey(keyIx: Int) -> Key {
-        // will generate major mode and make key with it
-    }
-    
-    public func getMelodicMinorKey(keyIx: Int) -> Key {
-        // will generate melodic minor mode and make key with it
-    }
-    
     public func addKeyChangeObserver(observer: KeyChangeObserver) {
-        <#code#>
+        observers.append(observer)
     }
     
     public func removeKeyChangeObserver(observer: KeyChangeObserver) {
-        <#code#>
+        // Todo: Not sure how to implement this yet:
+        // Doesn't require it right now since observers are only ever added, never removed
+    }
+    
+    public func notifyObservers() {
+        for observer in observers {
+            observer.update(newKeyIx: activeKeyIx)
+        }
     }
     
     private func updateContenderKeys() {
