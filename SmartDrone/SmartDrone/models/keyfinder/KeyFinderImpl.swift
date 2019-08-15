@@ -17,11 +17,13 @@ public class KeyFinderImpl: KeyFinder {
     
     private static let melodicMinorIncrementSequence = MusicTheory.DORIAN_FLAT2_SEQUENCE
     
-    /* Data & Objects */
+    /* Containers */
     
     private var activeNoteList: ActiveNoteList
     
     private var isContender: [Bool]
+    
+    private var keyTimers: [Timer?]
     
     private var observers: [KeyChangeObserver]
     
@@ -41,7 +43,7 @@ public class KeyFinderImpl: KeyFinder {
 
     private var maxKeyStrength: Int
     
-    public var activeKeyTimerLen: Int?
+    public var activeKeyTimerLen: Double?
     
     private var _parentScale: ParentScale?
     
@@ -62,31 +64,28 @@ public class KeyFinderImpl: KeyFinder {
         }
     }
     
+    /* Methods */
+    
     public init() {
         self.activeNoteList = ActiveNoteList()
         self.maxKeyStrength = -1
         self.activeKeyIx = -1
         self.isContender = [Bool](repeating: false, count: MusicTheory.OCTAVE_SIZE)
+        self.keyTimers = [Timer?](repeating: nil, count: MusicTheory.OCTAVE_SIZE)
     }
     
     public func start() {
-        // Does nothing in android version
+        // Does nothing in android version... so...
     }
     
-    // Todo: Test function
     public func clear() {
-        // Remove all notes from active note list
-        for (ix, isActive) in activeNoteList.noteIsActive.enumerated() {
-            if isActive {
-                activeNoteList.removeNote(ix: ix)
+        // Cancel all scheuled key changes
+        for ix in 0..<keyTimers.count {
+            if keyTimers[ix] != nil {
+                cancelKeyTimer(keyIx: ix)
             }
         }
-        
-        // for each note timer
-            // stop note timer
-        
-        // for each key timer
-            // stop key timer
+        activeNoteList.clear()
     }
     
     public func addNote(note: Note) {
@@ -99,14 +98,6 @@ public class KeyFinderImpl: KeyFinder {
         activeNoteList.removeNote(ix: note.ix)
         maxKeyStrength = activeNoteList.keyStrength.max()!
         updateContenderKeys()
-    }
-    
-    public func scheduleNoteRemoval(toRemove: Note) {
-        // todo
-    }
-    
-    public func cancelNoteRemoval(toCancel: Note) {
-        // todo
     }
     
     public func addKeyChangeObserver(observer: KeyChangeObserver) {
@@ -131,13 +122,15 @@ public class KeyFinderImpl: KeyFinder {
                 if isContender[keyIx] {
                     if !meetsContenderRequirements(curKeyStr: keyStr) {
                         // todo: cancel key change (nil check?)
-                        isContender[keyIx] = true
+                        cancelKeyTimer(keyIx: keyIx)
+                        isContender[keyIx] = false
                     }
                 }
                 else {
                     if meetsContenderRequirements(curKeyStr: keyStr) {
                         // todo: schedule active key change
-                        isContender[keyIx] = false
+                        startKeyTimer(keyIx: keyIx)
+                        isContender[keyIx] = true
                     }
                 }
             }
@@ -150,6 +143,24 @@ public class KeyFinderImpl: KeyFinder {
     private func meetsContenderRequirements(curKeyStr: Int) -> Bool {
         return curKeyStr > activeNoteList.keyStrength[activeKeyIx]
             && curKeyStr == maxKeyStrength
+    }
+    
+    private func startKeyTimer(keyIx: Int) {
+        keyTimers[keyIx] = Timer.scheduledTimer(
+            timeInterval: activeKeyTimerLen!,
+            target: self,
+            selector: #selector(setActiveKeyIx(_:)),
+            userInfo: keyIx,
+            repeats: false)
+    }
+    
+    private func cancelKeyTimer(keyIx: Int) {
+        keyTimers[keyIx]!.invalidate()
+        keyTimers[keyIx] = nil
+    }
+    
+    @objc private func setActiveKeyIx(_ timer: Timer) {
+        activeKeyIx = timer.userInfo as! Int
     }
 
 }

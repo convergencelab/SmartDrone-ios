@@ -13,7 +13,7 @@ public protocol KeyFinder: class, KeyChangeObservable {
     
     var parentScale: ParentScale? { get set }
     
-    var activeKeyTimerLen: Int? { get set }
+    var activeKeyTimerLen: Double? { get set }
         
     func start()
 
@@ -21,8 +21,6 @@ public protocol KeyFinder: class, KeyChangeObservable {
 
     func addNote(note: Note)
     
-    func scheduleNoteRemoval(toRemove: Note)
-    
-    func cancelNoteRemoval(toCancel: Note)
+    func removeNote(note: Note)
 
 }
