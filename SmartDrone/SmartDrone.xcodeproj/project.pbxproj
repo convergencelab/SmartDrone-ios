@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F756279D2322D8B900E3F78C /* MidiDriver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F75627992322D81300E3F78C /* MidiDriver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F756279F2322D8CB00E3F78C /* MidiDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75627992322D81300E3F78C /* MidiDriver.framework */; };
 		F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F522F0630900296789 /* AppDelegate.swift */; };
 		F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F722F0630900296789 /* DroneViewController.swift */; };
 		F77BC8FB22F0630A00296789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8F922F0630A00296789 /* Main.storyboard */; };
@@ -47,6 +49,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F75627982322D81300E3F78C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F75627942322D81300E3F78C /* MidiDriver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F75627632321B9C200E3F78C;
+			remoteInfo = MidiDriver;
+		};
+		F75627A02322D90500E3F78C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F75627942322D81300E3F78C /* MidiDriver.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F75627622321B9C200E3F78C;
+			remoteInfo = MidiDriver;
+		};
 		F77BC90722F0633B00296789 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F77BC8EA22F0630900296789 /* Project object */;
@@ -99,6 +115,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */,
+				F756279D2322D8B900E3F78C /* MidiDriver.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +123,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21BC8F5174F46595340B5155 /* Pods-SmartDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDrone.debug.xcconfig"; path = "Target Support Files/Pods-SmartDrone/Pods-SmartDrone.debug.xcconfig"; sourceTree = "<group>"; };
+		922E12DE0DF72F47627B6F75 /* Pods_SmartDrone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDrone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32658597F64D95A70B86BD0 /* Pods-SmartDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDrone.release.xcconfig"; path = "Target Support Files/Pods-SmartDrone/Pods-SmartDrone.release.xcconfig"; sourceTree = "<group>"; };
+		F75627942322D81300E3F78C /* MidiDriver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MidiDriver.xcodeproj; path = ../../../MidiDriver/MidiDriver/MidiDriver.xcodeproj; sourceTree = "<group>"; };
 		F77BC8F222F0630900296789 /* SmartDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC8F522F0630900296789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F77BC8F722F0630900296789 /* DroneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */,
+				F756279F2322D8CB00E3F78C /* MidiDriver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,15 +198,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F75627952322D81300E3F78C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F75627992322D81300E3F78C /* MidiDriver.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F77BC8E922F0630900296789 = {
 			isa = PBXGroup;
 			children = (
+				F75627942322D81300E3F78C /* MidiDriver.xcodeproj */,
 				F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */,
 				F77BC8F422F0630900296789 /* SmartDrone */,
 				F77BC90922F0633B00296789 /* SmartDroneTests */,
 				F7FB3C4E2305D52B00511860 /* SmartDroneModelTests */,
 				F77BC8F322F0630900296789 /* Products */,
 				F77BC92322F0643D00296789 /* Frameworks */,
+				FCC404FB5845F0677206D959 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,6 +269,7 @@
 		F77BC92322F0643D00296789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				922E12DE0DF72F47627B6F75 /* Pods_SmartDrone.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -360,6 +393,15 @@
 			path = SmartDroneModelTests;
 			sourceTree = "<group>";
 		};
+		FCC404FB5845F0677206D959 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21BC8F5174F46595340B5155 /* Pods-SmartDrone.debug.xcconfig */,
+				D32658597F64D95A70B86BD0 /* Pods-SmartDrone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +409,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F77BC91A22F0633B00296789 /* Build configuration list for PBXNativeTarget "SmartDrone" */;
 			buildPhases = (
+				BD952993B45FBAC6CCE24F48 /* [CP] Check Pods Manifest.lock */,
 				F77BC8EE22F0630900296789 /* Sources */,
 				F77BC8EF22F0630900296789 /* Frameworks */,
 				F77BC8F022F0630900296789 /* Resources */,
@@ -375,6 +418,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F75627A12322D90500E3F78C /* PBXTargetDependency */,
 				F79FF10722F06FDC00DE5E38 /* PBXTargetDependency */,
 			);
 			name = SmartDrone;
@@ -457,6 +501,10 @@
 					ProductGroup = F79FF0FC22F06F6F00DE5E38 /* Products */;
 					ProjectRef = F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */;
 				},
+				{
+					ProductGroup = F75627952322D81300E3F78C /* Products */;
+					ProjectRef = F75627942322D81300E3F78C /* MidiDriver.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -468,6 +516,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F75627992322D81300E3F78C /* MidiDriver.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MidiDriver.framework;
+			remoteRef = F75627982322D81300E3F78C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -510,6 +565,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD952993B45FBAC6CCE24F48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartDrone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F77BC8EE22F0630900296789 /* Sources */ = {
@@ -567,6 +647,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F75627A12322D90500E3F78C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MidiDriver;
+			targetProxy = F75627A02322D90500E3F78C /* PBXContainerItemProxy */;
+		};
 		F77BC90822F0633B00296789 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F77BC8F122F0630900296789 /* SmartDrone */;
@@ -727,11 +812,14 @@
 		};
 		F77BC91B22F0633B00296789 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21BC8F5174F46595340B5155 /* Pods-SmartDrone.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2JXL6FGDG;
 				INFOPLIST_FILE = SmartDrone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -745,11 +833,14 @@
 		};
 		F77BC91C22F0633B00296789 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D32658597F64D95A70B86BD0 /* Pods-SmartDrone.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2JXL6FGDG;
 				INFOPLIST_FILE = SmartDrone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
