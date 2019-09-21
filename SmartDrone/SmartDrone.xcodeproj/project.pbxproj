@@ -11,6 +11,10 @@
 		F75F3F042336D95100FA995A /* MidiDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75F3F032336D87900FA995A /* MidiDriver.framework */; };
 		F75F3F052336D95800FA995A /* MidiDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75F3F032336D87900FA995A /* MidiDriver.framework */; };
 		F75F3F062336D95800FA995A /* MidiDriver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F75F3F032336D87900FA995A /* MidiDriver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F75F3F122336E6A500FA995A /* NoteProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F112336E6A500FA995A /* NoteProcessor.swift */; };
+		F75F3F142336E7A900FA995A /* NoteProcessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F132336E7A900FA995A /* NoteProcessorImpl.swift */; };
+		F75F3F162336E86F00FA995A /* NoteProcessorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F152336E86F00FA995A /* NoteProcessorObserver.swift */; };
+		F75F3F182336E9CB00FA995A /* PitchConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F172336E9CB00FA995A /* PitchConverter.swift */; };
 		F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F522F0630900296789 /* AppDelegate.swift */; };
 		F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F722F0630900296789 /* DroneViewController.swift */; };
 		F77BC8FB22F0630A00296789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8F922F0630A00296789 /* Main.storyboard */; };
@@ -129,6 +133,10 @@
 		711005DF59483CF23768582C /* Pods_SmartDrone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDrone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2ABA90657078524CEE79A55 /* Pods-SmartDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDrone.release.xcconfig"; path = "Target Support Files/Pods-SmartDrone/Pods-SmartDrone.release.xcconfig"; sourceTree = "<group>"; };
 		F75F3EFD2336D87900FA995A /* MidiDriver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MidiDriver.xcodeproj; path = ../../../MidiDriver/MidiDriver/MidiDriver.xcodeproj; sourceTree = "<group>"; };
+		F75F3F112336E6A500FA995A /* NoteProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteProcessor.swift; sourceTree = "<group>"; };
+		F75F3F132336E7A900FA995A /* NoteProcessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteProcessorImpl.swift; sourceTree = "<group>"; };
+		F75F3F152336E86F00FA995A /* NoteProcessorObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteProcessorObserver.swift; sourceTree = "<group>"; };
+		F75F3F172336E9CB00FA995A /* PitchConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchConverter.swift; sourceTree = "<group>"; };
 		F77BC8F222F0630900296789 /* SmartDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC8F522F0630900296789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F77BC8F722F0630900296789 /* DroneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneViewController.swift; sourceTree = "<group>"; };
@@ -376,6 +384,10 @@
 		F7A63ACD230484BA00150128 /* noteprocessor */ = {
 			isa = PBXGroup;
 			children = (
+				F75F3F112336E6A500FA995A /* NoteProcessor.swift */,
+				F75F3F132336E7A900FA995A /* NoteProcessorImpl.swift */,
+				F75F3F152336E86F00FA995A /* NoteProcessorObserver.swift */,
+				F75F3F172336E9CB00FA995A /* PitchConverter.swift */,
 			);
 			path = noteprocessor;
 			sourceTree = "<group>";
@@ -601,7 +613,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */,
+				F75F3F182336E9CB00FA995A /* PitchConverter.swift in Sources */,
 				F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */,
+				F75F3F122336E6A500FA995A /* NoteProcessor.swift in Sources */,
 				F78D9F3E23057598007477BD /* KeyChangeObserver.swift in Sources */,
 				F78D9F3123057151007477BD /* DroneRepositoryImpl.swift in Sources */,
 				F7A63AD42304A29C00150128 /* HarmonyGenerator.swift in Sources */,
@@ -611,12 +625,14 @@
 				F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */,
 				F7A63AD62304A2AA00150128 /* HarmonyGeneratorImpl.swift in Sources */,
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
+				F75F3F162336E86F00FA995A /* NoteProcessorObserver.swift in Sources */,
 				F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,
 				F7B669B82305E33D00E08F24 /* DroneViewRouter.swift in Sources */,
 				F7B669B62305E1F300E08F24 /* DroneConfigurator.swift in Sources */,
 				F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */,
 				F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */,
+				F75F3F142336E7A900FA995A /* NoteProcessorImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
