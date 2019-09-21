@@ -27,6 +27,8 @@ protocol DroneView: class {
 
 class DroneViewController: UIViewController, DroneView {
     
+    @IBOutlet weak var pitchLabel: UILabel!
+    
     var configurator = DroneConfiguratorImpl()
     var presenter: DronePresenter!
 
