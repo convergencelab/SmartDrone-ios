@@ -29,6 +29,13 @@ final class DronePresenterImpl: DronePresenter, NoteProcessorObserver {
     var noteProcessor: NoteProcessor!
     var harmonyGenerator: HarmonyGenerator!
     
+    private var state = State.OFF
+    
+    enum State {
+        case ON
+        case OFF
+    }
+    
     public init(droneRepo: DroneRepository,
                 view: DroneViewController,
                 keyFinder: KeyFinder,
@@ -47,7 +54,14 @@ final class DronePresenterImpl: DronePresenter, NoteProcessorObserver {
     }
     
     func toggleDroneState() {
-        
+        if state == State.OFF {
+            noteProcessor.start()
+            state = State.ON
+        }
+        else {
+            noteProcessor.stop()
+            state = State.OFF
+        }
     }
 
     func handleActiveKeyButtonClick() {
@@ -67,7 +81,7 @@ final class DronePresenterImpl: DronePresenter, NoteProcessorObserver {
     }
     
     func handleNoteResult(noteIx: Int) {
-        
+        view.showNoteHeard(noteIx: noteIx)
     }
 
 }

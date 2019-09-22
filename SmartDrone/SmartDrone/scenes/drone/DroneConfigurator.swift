@@ -17,6 +17,7 @@ protocol DroneConfigurator {
 class DroneConfiguratorImpl: DroneConfigurator {
     
     func configure(droneViewController: DroneViewController) {
+        
         let droneRepo = DroneRepositoryImpl()
         let keyFinder = KeyFinderImpl()
         let audioPlayer = AudioPlayerImpl()

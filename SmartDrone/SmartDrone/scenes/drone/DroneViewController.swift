@@ -15,7 +15,7 @@ protocol DroneView: class {
     
     func showDroneInactive()
     
-    func showNoteHeard()
+    func showNoteHeard(noteIx: Int)
     
     func showKeyActive()
     
@@ -49,8 +49,9 @@ class DroneViewController: UIViewController, DroneView {
         // todo
     }
     
-    func showNoteHeard() {
-        // todo
+    func showNoteHeard(noteIx: Int) {
+//        pitchLabel.text = String(noteIx)
+        pitchLabel.text = String(noteIx)
     }
     
     func showKeyActive() {
@@ -65,5 +66,9 @@ class DroneViewController: UIViewController, DroneView {
         // todo
     }
 
+    @IBAction func onDroneClicked(_ sender: UIButton) {
+        print("Drone clicked")
+        presenter.toggleDroneState()
+    }
 }
 

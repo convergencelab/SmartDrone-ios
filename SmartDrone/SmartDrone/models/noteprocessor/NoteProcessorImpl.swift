@@ -17,6 +17,8 @@ public class NoteProcessorImpl: NoteProcessor {
     
     private var observers = [NoteProcessorObserver]()
     
+    private var scheduledTimer: Timer?
+    
     public init() {
         AKSettings.audioInputEnabled = true
         mic = AKMicrophone()
@@ -27,12 +29,13 @@ public class NoteProcessorImpl: NoteProcessor {
     }
     
     public func start() {
+        // Todo: Check out this line of code later
         do {
             try AudioKit.start()
         } catch {
             AKLog("AudioKit did not start!")
         }
-        Timer.scheduledTimer(
+        scheduledTimer = Timer.scheduledTimer(
             timeInterval: 0.1,
             target: self,
             selector: #selector(NoteProcessorImpl.notifyObservers),
@@ -41,7 +44,10 @@ public class NoteProcessorImpl: NoteProcessor {
     }
     
     public func stop() {
-        // Don't know what to do here
+        if (scheduledTimer != nil) {
+            scheduledTimer!.invalidate()
+            scheduledTimer = nil
+        }
     }
     
     public func addNoteObserver(observer: NoteProcessorObserver) {
@@ -53,11 +59,15 @@ public class NoteProcessorImpl: NoteProcessor {
     }
     
     @objc func notifyObservers() {
+        let pitchIx: Int
         if tracker.amplitude > 0.025 {
-            let pitchIx = PitchConverter.hertzToMidiKey(hertzValue: tracker.frequency)
-            for observer in observers {
-                observer.handleNoteResult(noteIx: pitchIx)
-            }
+            pitchIx = PitchConverter.hertzToMidiKey(hertzValue: tracker.frequency)
+        }
+        else {
+            pitchIx = -1
+        }
+        for observer in observers {
+            observer.handleNoteResult(noteIx: pitchIx)
         }
     }
     
