@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		511842C82BB32CD3E4A19A2B /* Pods_SmartDrone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922E12DE0DF72F47627B6F75 /* Pods_SmartDrone.framework */; };
-		F756279D2322D8B900E3F78C /* MidiDriver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F75627992322D81300E3F78C /* MidiDriver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F756279F2322D8CB00E3F78C /* MidiDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75627992322D81300E3F78C /* MidiDriver.framework */; };
 		F75F3F242337E28D00FA995A /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F232337E28D00FA995A /* AudioPlayer.swift */; };
 		F75F3F272337E2AC00FA995A /* AudioPlayerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F262337E2AC00FA995A /* AudioPlayerImpl.swift */; };
 		F75F3F292337E2D400FA995A /* NoteProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F282337E2D400FA995A /* NoteProcessor.swift */; };
@@ -38,9 +36,6 @@
 		F79B49552301B42C00B0B915 /* VoicingTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B49542301B42C00B0B915 /* VoicingTemplateTests.swift */; };
 		F79B49592301C0CB00B0B915 /* MusicTheoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B49582301C0CB00B0B915 /* MusicTheoryTests.swift */; };
 		F79B495B2301CD6500B0B915 /* VoicingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B495A2301CD6500B0B915 /* VoicingTests.swift */; };
-		F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
-		F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */; };
 		F7A63AD0230485BA00150128 /* NoteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63ACF230485BA00150128 /* NoteFilter.swift */; };
 		F7A63AD2230486E400150128 /* NoteFilterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD1230486E400150128 /* NoteFilterImpl.swift */; };
 		F7A63AD42304A29C00150128 /* HarmonyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD32304A29C00150128 /* HarmonyGenerator.swift */; };
@@ -50,26 +45,16 @@
 		F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD0E23033C7D0078C022 /* BaseView.swift */; };
 		F7B6FD112303406D0078C022 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD102303406D0078C022 /* BasePresenter.swift */; };
 		F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6FD14230342E00078C022 /* DronePresenter.swift */; };
+		F7D345B22337EDD100BE9B16 /* KeyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D345AE2337EDB800BE9B16 /* KeyFinder.framework */; };
+		F7D345B32337EDD100BE9B16 /* KeyFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7D345AE2337EDB800BE9B16 /* KeyFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7D345BC2337EDE900BE9B16 /* MidiDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D345BB2337EDE200BE9B16 /* MidiDriver.framework */; };
+		F7D345BD2337EDE900BE9B16 /* MidiDriver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7D345BB2337EDE200BE9B16 /* MidiDriver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7FA2C5F22F0800D00E740A8 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */; };
 		F7FB3C482305D4D300511860 /* KeyFinderImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D9F412305C558007477BD /* KeyFinderImplTests.swift */; };
 		F7FB3C502305D52B00511860 /* SmartDroneModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3C4F2305D52B00511860 /* SmartDroneModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F75627982322D81300E3F78C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F75627942322D81300E3F78C /* MidiDriver.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F75627632321B9C200E3F78C;
-			remoteInfo = MidiDriver;
-		};
-		F75627A02322D90500E3F78C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F75627942322D81300E3F78C /* MidiDriver.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F75627622321B9C200E3F78C;
-			remoteInfo = MidiDriver;
-		};
 		F77BC90722F0633B00296789 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F77BC8EA22F0630900296789 /* Project object */;
@@ -77,33 +62,40 @@
 			remoteGlobalIDString = F77BC8F122F0630900296789;
 			remoteInfo = SmartDrone;
 		};
-		F79FF10022F06F6F00DE5E38 /* PBXContainerItemProxy */ = {
+		F7D345AD2337EDB800BE9B16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */;
+			containerPortal = F7D345A82337EDB800BE9B16 /* KeyFinder.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F74A0A2722E87DF900AF35A6;
 			remoteInfo = KeyFinder;
 		};
-		F79FF10222F06F6F00DE5E38 /* PBXContainerItemProxy */ = {
+		F7D345AF2337EDB800BE9B16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */;
+			containerPortal = F7D345A82337EDB800BE9B16 /* KeyFinder.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F77BC8CB22E8B65D00296789;
 			remoteInfo = KeyFinderTests;
 		};
-		F79FF10622F06FDC00DE5E38 /* PBXContainerItemProxy */ = {
+		F7D345B42337EDD100BE9B16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */;
+			containerPortal = F7D345A82337EDB800BE9B16 /* KeyFinder.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F74A0A2622E87DF800AF35A6;
 			remoteInfo = KeyFinder;
 		};
-		F79FF10C22F0738B00DE5E38 /* PBXContainerItemProxy */ = {
+		F7D345BA2337EDE200BE9B16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */;
+			containerPortal = F7D345B62337EDE200BE9B16 /* MidiDriver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F75627632321B9C200E3F78C;
+			remoteInfo = MidiDriver;
+		};
+		F7D345BE2337EDE900BE9B16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D345B62337EDE200BE9B16 /* MidiDriver.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = F74A0A2622E87DF800AF35A6;
-			remoteInfo = KeyFinder;
+			remoteGlobalIDString = F75627622321B9C200E3F78C;
+			remoteInfo = MidiDriver;
 		};
 		F7FB3C522305D52B00511860 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -121,8 +113,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F79FF10522F06FDC00DE5E38 /* KeyFinder.framework in Embed Frameworks */,
-				F756279D2322D8B900E3F78C /* MidiDriver.framework in Embed Frameworks */,
+				F7D345B32337EDD100BE9B16 /* KeyFinder.framework in Embed Frameworks */,
+				F7D345BD2337EDE900BE9B16 /* MidiDriver.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +125,6 @@
 		21BC8F5174F46595340B5155 /* Pods-SmartDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDrone.debug.xcconfig"; path = "Target Support Files/Pods-SmartDrone/Pods-SmartDrone.debug.xcconfig"; sourceTree = "<group>"; };
 		922E12DE0DF72F47627B6F75 /* Pods_SmartDrone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDrone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32658597F64D95A70B86BD0 /* Pods-SmartDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDrone.release.xcconfig"; path = "Target Support Files/Pods-SmartDrone/Pods-SmartDrone.release.xcconfig"; sourceTree = "<group>"; };
-		F75627942322D81300E3F78C /* MidiDriver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MidiDriver.xcodeproj; path = ../../../MidiDriver/MidiDriver/MidiDriver.xcodeproj; sourceTree = "<group>"; };
 		F75F3F232337E28D00FA995A /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
 		F75F3F262337E2AC00FA995A /* AudioPlayerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerImpl.swift; sourceTree = SOURCE_ROOT; };
 		F75F3F282337E2D400FA995A /* NoteProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteProcessor.swift; sourceTree = SOURCE_ROOT; };
@@ -167,7 +158,6 @@
 		F79B49542301B42C00B0B915 /* VoicingTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicingTemplateTests.swift; sourceTree = "<group>"; };
 		F79B49582301C0CB00B0B915 /* MusicTheoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTheoryTests.swift; sourceTree = "<group>"; };
 		F79B495A2301CD6500B0B915 /* VoicingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicingTests.swift; sourceTree = "<group>"; };
-		F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
 		F7A63ACF230485BA00150128 /* NoteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFilter.swift; sourceTree = "<group>"; };
 		F7A63AD1230486E400150128 /* NoteFilterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFilterImpl.swift; sourceTree = "<group>"; };
 		F7A63AD32304A29C00150128 /* HarmonyGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonyGenerator.swift; sourceTree = "<group>"; };
@@ -177,6 +167,8 @@
 		F7B6FD0E23033C7D0078C022 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F7B6FD102303406D0078C022 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		F7B6FD14230342E00078C022 /* DronePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DronePresenter.swift; sourceTree = "<group>"; };
+		F7D345A82337EDB800BE9B16 /* KeyFinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyFinder.xcodeproj; path = "../../KeyFinder/KeyFinder-ios/KeyFinder.xcodeproj"; sourceTree = "<group>"; };
+		F7D345B62337EDE200BE9B16 /* MidiDriver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MidiDriver.xcodeproj; path = ../../MidiDriver/MidiDriver/MidiDriver.xcodeproj; sourceTree = "<group>"; };
 		F7FA2C5E22F0800D00E740A8 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 		F7FB3C4D2305D52B00511860 /* SmartDroneModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDroneModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FB3C4F2305D52B00511860 /* SmartDroneModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartDroneModelTests.swift; sourceTree = "<group>"; };
@@ -188,8 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F79FF10422F06FDC00DE5E38 /* KeyFinder.framework in Frameworks */,
-				F756279F2322D8CB00E3F78C /* MidiDriver.framework in Frameworks */,
+				F7D345BC2337EDE900BE9B16 /* MidiDriver.framework in Frameworks */,
+				F7D345B22337EDD100BE9B16 /* KeyFinder.framework in Frameworks */,
 				511842C82BB32CD3E4A19A2B /* Pods_SmartDrone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +190,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F79FF10B22F0733B00DE5E38 /* KeyFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,19 +203,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F75627952322D81300E3F78C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F75627992322D81300E3F78C /* MidiDriver.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F77BC8E922F0630900296789 = {
 			isa = PBXGroup;
 			children = (
-				F75627942322D81300E3F78C /* MidiDriver.xcodeproj */,
-				F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */,
+				F7D345B62337EDE200BE9B16 /* MidiDriver.xcodeproj */,
+				F7D345A82337EDB800BE9B16 /* KeyFinder.xcodeproj */,
 				F77BC8F422F0630900296789 /* SmartDrone */,
 				F77BC90922F0633B00296789 /* SmartDroneTests */,
 				F7FB3C4E2305D52B00511860 /* SmartDroneModelTests */,
@@ -340,15 +323,6 @@
 			path = drone;
 			sourceTree = "<group>";
 		};
-		F79FF0FC22F06F6F00DE5E38 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */,
-				F79FF10322F06F6F00DE5E38 /* KeyFinderTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F7A63AC92304847000150128 /* notefilter */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +378,23 @@
 			path = scenes;
 			sourceTree = "<group>";
 		};
+		F7D345A92337EDB800BE9B16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7D345AE2337EDB800BE9B16 /* KeyFinder.framework */,
+				F7D345B02337EDB800BE9B16 /* KeyFinderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7D345B72337EDE200BE9B16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7D345BB2337EDE200BE9B16 /* MidiDriver.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F7FB3C4E2305D52B00511860 /* SmartDroneModelTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,8 +429,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				F75627A12322D90500E3F78C /* PBXTargetDependency */,
-				F79FF10722F06FDC00DE5E38 /* PBXTargetDependency */,
+				F7D345B52337EDD100BE9B16 /* PBXTargetDependency */,
+				F7D345BF2337EDE900BE9B16 /* PBXTargetDependency */,
 			);
 			name = SmartDrone;
 			productName = SmartDrone;
@@ -457,7 +448,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F79FF10D22F0738B00DE5E38 /* PBXTargetDependency */,
 				F77BC90822F0633B00296789 /* PBXTargetDependency */,
 			);
 			name = SmartDroneTests;
@@ -518,12 +508,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F79FF0FC22F06F6F00DE5E38 /* Products */;
-					ProjectRef = F79FF0FB22F06F6F00DE5E38 /* KeyFinder.xcodeproj */;
+					ProductGroup = F7D345A92337EDB800BE9B16 /* Products */;
+					ProjectRef = F7D345A82337EDB800BE9B16 /* KeyFinder.xcodeproj */;
 				},
 				{
-					ProductGroup = F75627952322D81300E3F78C /* Products */;
-					ProjectRef = F75627942322D81300E3F78C /* MidiDriver.xcodeproj */;
+					ProductGroup = F7D345B72337EDE200BE9B16 /* Products */;
+					ProjectRef = F7D345B62337EDE200BE9B16 /* MidiDriver.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -536,25 +526,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F75627992322D81300E3F78C /* MidiDriver.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MidiDriver.framework;
-			remoteRef = F75627982322D81300E3F78C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F79FF10122F06F6F00DE5E38 /* KeyFinder.framework */ = {
+		F7D345AE2337EDB800BE9B16 /* KeyFinder.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KeyFinder.framework;
-			remoteRef = F79FF10022F06F6F00DE5E38 /* PBXContainerItemProxy */;
+			remoteRef = F7D345AD2337EDB800BE9B16 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F79FF10322F06F6F00DE5E38 /* KeyFinderTests.xctest */ = {
+		F7D345B02337EDB800BE9B16 /* KeyFinderTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = KeyFinderTests.xctest;
-			remoteRef = F79FF10222F06F6F00DE5E38 /* PBXContainerItemProxy */;
+			remoteRef = F7D345AF2337EDB800BE9B16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D345BB2337EDE200BE9B16 /* MidiDriver.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MidiDriver.framework;
+			remoteRef = F7D345BA2337EDE200BE9B16 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -673,25 +663,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F75627A12322D90500E3F78C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MidiDriver;
-			targetProxy = F75627A02322D90500E3F78C /* PBXContainerItemProxy */;
-		};
 		F77BC90822F0633B00296789 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F77BC8F122F0630900296789 /* SmartDrone */;
 			targetProxy = F77BC90722F0633B00296789 /* PBXContainerItemProxy */;
 		};
-		F79FF10722F06FDC00DE5E38 /* PBXTargetDependency */ = {
+		F7D345B52337EDD100BE9B16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeyFinder;
-			targetProxy = F79FF10622F06FDC00DE5E38 /* PBXContainerItemProxy */;
+			targetProxy = F7D345B42337EDD100BE9B16 /* PBXContainerItemProxy */;
 		};
-		F79FF10D22F0738B00DE5E38 /* PBXTargetDependency */ = {
+		F7D345BF2337EDE900BE9B16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = KeyFinder;
-			targetProxy = F79FF10C22F0738B00DE5E38 /* PBXContainerItemProxy */;
+			name = MidiDriver;
+			targetProxy = F7D345BE2337EDE900BE9B16 /* PBXContainerItemProxy */;
 		};
 		F7FB3C532305D52B00511860 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
