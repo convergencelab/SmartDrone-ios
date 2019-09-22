@@ -15,6 +15,8 @@
 		F75F3F142336E7A900FA995A /* NoteProcessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F132336E7A900FA995A /* NoteProcessorImpl.swift */; };
 		F75F3F162336E86F00FA995A /* NoteProcessorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F152336E86F00FA995A /* NoteProcessorObserver.swift */; };
 		F75F3F182336E9CB00FA995A /* PitchConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F172336E9CB00FA995A /* PitchConverter.swift */; };
+		F75F3F1A2337B2F500FA995A /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F192337B2F500FA995A /* AudioPlayer.swift */; };
+		F75F3F1C2337B31400FA995A /* AudioPlayerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F3F1B2337B31400FA995A /* AudioPlayerImpl.swift */; };
 		F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F522F0630900296789 /* AppDelegate.swift */; };
 		F77BC8F822F0630900296789 /* DroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77BC8F722F0630900296789 /* DroneViewController.swift */; };
 		F77BC8FB22F0630A00296789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77BC8F922F0630A00296789 /* Main.storyboard */; };
@@ -137,6 +139,8 @@
 		F75F3F132336E7A900FA995A /* NoteProcessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteProcessorImpl.swift; sourceTree = "<group>"; };
 		F75F3F152336E86F00FA995A /* NoteProcessorObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteProcessorObserver.swift; sourceTree = "<group>"; };
 		F75F3F172336E9CB00FA995A /* PitchConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchConverter.swift; sourceTree = "<group>"; };
+		F75F3F192337B2F500FA995A /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = SmartDrone/models/noteprocessor/AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
+		F75F3F1B2337B31400FA995A /* AudioPlayerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioPlayerImpl.swift; path = SmartDrone/models/noteprocessor/AudioPlayerImpl.swift; sourceTree = SOURCE_ROOT; };
 		F77BC8F222F0630900296789 /* SmartDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC8F522F0630900296789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F77BC8F722F0630900296789 /* DroneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneViewController.swift; sourceTree = "<group>"; };
@@ -377,6 +381,8 @@
 		F7A63ACC230484A300150128 /* audioplayer */ = {
 			isa = PBXGroup;
 			children = (
+				F75F3F192337B2F500FA995A /* AudioPlayer.swift */,
+				F75F3F1B2337B31400FA995A /* AudioPlayerImpl.swift */,
 			);
 			path = audioplayer;
 			sourceTree = "<group>";
@@ -621,10 +627,12 @@
 				F7A63AD42304A29C00150128 /* HarmonyGenerator.swift in Sources */,
 				F79B494922FDFA4000B0B915 /* KeyFinderImpl.swift in Sources */,
 				F78D9F2E230570AF007477BD /* DroneRepository.swift in Sources */,
+				F75F3F1C2337B31400FA995A /* AudioPlayerImpl.swift in Sources */,
 				F78D9F3C2305757F007477BD /* KeyChangeObservable.swift in Sources */,
 				F7B6FD0F23033C7D0078C022 /* BaseView.swift in Sources */,
 				F7A63AD62304A2AA00150128 /* HarmonyGeneratorImpl.swift in Sources */,
 				F77BC8F622F0630900296789 /* AppDelegate.swift in Sources */,
+				F75F3F1A2337B2F500FA995A /* AudioPlayer.swift in Sources */,
 				F75F3F162336E86F00FA995A /* NoteProcessorObserver.swift in Sources */,
 				F7B6FD15230342E00078C022 /* DronePresenter.swift in Sources */,
 				F79B494722FDFA3400B0B915 /* KeyFinder.swift in Sources */,

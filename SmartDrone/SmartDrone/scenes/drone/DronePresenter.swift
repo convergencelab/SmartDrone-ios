@@ -20,8 +20,32 @@ protocol DronePresenter: class, BasePresenter {
 
 }
 
-final class DronePresenterImpl: DronePresenter {
+final class DronePresenterImpl: DronePresenter, NoteProcessorObserver {
 
+    var droneRepo: DroneRepository!
+    var view: DroneViewController!
+    var keyFinder: KeyFinder!
+    var audioPlayer: AudioPlayer!
+    var noteProcessor: NoteProcessor!
+    var harmonyGenerator: HarmonyGenerator!
+    
+    public init(droneRepo: DroneRepository,
+                view: DroneViewController,
+                keyFinder: KeyFinder,
+                audioPlayer: AudioPlayer,
+                noteProcessor: NoteProcessor,
+                harmonyGenerator: HarmonyGenerator) {
+        
+        self.droneRepo = droneRepo
+        self.view = view
+        self.keyFinder = keyFinder
+        self.audioPlayer = audioPlayer
+        self.noteProcessor = noteProcessor
+        self.harmonyGenerator = harmonyGenerator
+        
+        noteProcessor.addNoteObserver(observer: self)
+    }
+    
     func toggleDroneState() {
         
     }
@@ -40,6 +64,10 @@ final class DronePresenterImpl: DronePresenter {
 
     func start() {
 
+    }
+    
+    func handleNoteResult(noteIx: Int) {
+        
     }
 
 }

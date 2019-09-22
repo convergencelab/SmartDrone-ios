@@ -29,14 +29,15 @@ class DroneViewController: UIViewController, DroneView {
     
     @IBOutlet weak var pitchLabel: UILabel!
     
-    var configurator = DroneConfiguratorImpl()
+    var configurator: DroneConfigurator!
     var presenter: DronePresenter!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        configurator = DroneConfiguratorImpl()
+        configurator.configure(droneViewController: self)
+        presenter.start()
         // Do any additional setup after loading the view.
     }
 

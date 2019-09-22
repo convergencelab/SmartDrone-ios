@@ -17,7 +17,21 @@ protocol DroneConfigurator {
 class DroneConfiguratorImpl: DroneConfigurator {
     
     func configure(droneViewController: DroneViewController) {
-        // todo: sprinkle in some magic
+        let droneRepo = DroneRepositoryImpl()
+        let keyFinder = KeyFinderImpl()
+        let audioPlayer = AudioPlayerImpl()
+        let noteProcessor = NoteProcessorImpl()
+        let harmonyGenerator = HarmonyGeneratorImpl()
+        
+        let presenter = DronePresenterImpl(
+            droneRepo: droneRepo,
+            view: droneViewController,
+            keyFinder: keyFinder,
+            audioPlayer: audioPlayer,
+            noteProcessor: noteProcessor,
+            harmonyGenerator: harmonyGenerator)
+        
+        droneViewController.presenter = presenter
     }
     
 }
