@@ -5,7 +5,6 @@
 //  Created by Travis MacDonald on 2019-07-30.
 //  Copyright © 2019 Convergence Lab. All rights reserved.
 //
-
 import UIKit
 import CoreData
 
@@ -15,7 +14,7 @@ protocol DroneView: class {
     
     func showDroneInactive()
     
-    func showNoteHeard()
+    func showNoteHeard(noteIx: Int)
     
     func showKeyActive()
     
@@ -27,17 +26,20 @@ protocol DroneView: class {
 
 class DroneViewController: UIViewController, DroneView {
     
-    var configurator = DroneConfiguratorImpl()
+    @IBOutlet weak var pitchLabel: UILabel!
+    
+    var configurator: DroneConfigurator!
     var presenter: DronePresenter!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        configurator = DroneConfiguratorImpl()
+        configurator.configure(droneViewController: self)
+        presenter.start()
         // Do any additional setup after loading the view.
     }
-
+    
     func showDroneActive() {
         // todo
     }
@@ -46,8 +48,9 @@ class DroneViewController: UIViewController, DroneView {
         // todo
     }
     
-    func showNoteHeard() {
-        // todo
+    func showNoteHeard(noteIx: Int) {
+        //        pitchLabel.text = String(noteIx)
+        pitchLabel.text = String(noteIx)
     }
     
     func showKeyActive() {
@@ -61,6 +64,9 @@ class DroneViewController: UIViewController, DroneView {
     func showPreferencesActivity() {
         // todo
     }
-
+    
+    @IBAction func onDroneClicked(_ sender: UIButton) {
+        print("Drone clicked")
+        presenter.toggleDroneState()
+    }
 }
-
